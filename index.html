@@ -782,6 +782,23 @@ main {
 .activity-badge.upgrade { color: var(--gold); }
 .activity-badge.aurora { color: var(--aurora-purple); }
 
+/* OPCIONAL pill — destacado, inline com o nome da atividade */
+.opcional-pill {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--aurora-cyan), var(--aurora-purple));
+  color: var(--bg-deep);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px rgba(103,232,249,0.25);
+}
+
 /* ============ DAY SIDEBAR ============ */
 .day-side {
   background: var(--bg-night);
@@ -1808,6 +1825,8 @@ const DAYS = [
       { id: 'a5_7', name: 'Diamond Beach (entardecer)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Praia de areia preta cravejada de icebergs cristalinos. Luz dourada do entardecer é mágica.', forced: true },
       { id: 'a5_8', name: 'Vestrahorn (montanha-cartão)', type: 'paid', cost: 110, tiers: [1,2,3], desc: 'Montanha em pico afiado refletindo numa praia preta. Acesso via Stokksnes (R$ 110 por veículo). 1h.' },
       { id: 'a5_9', name: 'Jantar de lagosta em Höfn', type: 'paid', cost: 700, tiers: [2,3], desc: 'Pakkhús ou Humarhöfnin. Lagosta islandesa (humar) é menor e mais doce que a americana.' },
+      { id: 'a5_11', name: 'Falljökull (língua glacial de Vatnajökull)', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Língua glacial que desce direto do Vatnajökull em direção a Skaftafell. Mirante a 10 min de caminhada do estacionamento de Skaftafell — uma das geleiras mais acessíveis sem guia. Boa adição se Svartifoss ficou rápido demais.' },
+      { id: 'a5_12', name: 'Hvalnes Nature Reserve Beach', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Praia preta com farol amarelo característico e vista das montanhas Eystrahorn (irmãs do Vestrahorn). Reserva natural com cisnes-canoros e renas selvagens. Parada de 20 min entre Höfn e Djúpivogur — você passa em frente, vale o desvio.' },
       { id: 'a5_10', name: 'Camping Djúpivogur', type: 'lodging', cost: 290, tiers: [1,2,3], desc: 'Camping pequeno mas charmoso, com piscina geotérmica do vilarejo ao lado.' },
     ],
     side: { lodging: 'Camping Djúpivogur', meal: 'Lagosta + cozinhar', auroraNote: 'Bom · região remota · lua minguante começando' }
@@ -1850,6 +1869,7 @@ const DAYS = [
       { id: 'a8_4', name: 'Vulcão Hverfjall (caminhada)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Subida de 30 min até a cratera. Caminhe ao redor (1h adicional). Vista 360º incrível.' },
       { id: 'a8_5', name: 'Mývatn Nature Baths', type: 'paid', cost: 580, tiers: [2,3], desc: 'Lagoa termal a 36–40°C com vista da paisagem vulcânica. Mais barato e menos turístico que Blue Lagoon.' },
       { id: 'a8_6', name: 'Caverna Grjótagjá', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Caverna com fonte termal subterrânea (cena famosa de Game of Thrones). Banho proibido.' },
+      { id: 'a8_7', name: 'Sigurgeirs Bird Museum (Mývatn)', type: 'paid', cost: 150, tiers: [1,2,3], opcional: true, desc: 'Museu de aves do lago Mývatn, na margem norte. Coleção privada do agricultor Sigurgeir Stefánsson (300+ espécies empalhadas). Pequeno, charmoso, didático — boa pausa entre as caminhadas vulcânicas. ~1h.' },
     ],
     side: { lodging: 'Camping Mývatn (2ª noite)', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · 2ª chance · Hverir e Dimmuborgir como foreground' }
   },
@@ -1951,6 +1971,7 @@ const DAYS = [
     activities: [
       { id: 'a15_1', name: 'Devolução do motorhome', type: 'transport', cost: 0, tiers: [1,2,3], desc: 'Tanque cheio, água suja descartada, limpeza básica. Reserve 1h30. Algumas locadoras oferecem shuttle para o centro.', forced: true },
       { id: 'a15_2', name: 'Sky Lagoon (ritual de 7 estágios)', type: 'premium', cost: 980, tiers: [2,3], desc: 'Banho geotermal de luxo na borda do oceano. Vista do pôr-do-sol. Ritual sauna→vapor→duche frio→máscara→infusão. ~3h. Reservar antecedência.' },
+      { id: 'a15_10', name: 'Blue Lagoon (a clássica)', type: 'premium', cost: 1100, tiers: [1,2,3], opcional: true, desc: 'A lagoa termal mais famosa do mundo, perto de Keflavík (~50 min de RVK). Águas leitosas com sílica, máscara de algas, banho no meio do campo de lava. Mais lotada e cara que Sky Lagoon, mas é "o lugar" — vale se nunca foi. Reservar com 1+ mês de antecedência. Pode encaixar no caminho de volta pra KEF no Dia 16 também.' },
       { id: 'a15_3', name: 'Laugavegur (compras) + Sandholt (café)', type: 'paid', cost: 800, tiers: [1,2,3], desc: 'Suéter lopapeysa (Handknitting Association), chocolate Omnom, vodka Reyka, bottlebrush de musgo. Sandholt é a melhor padaria.' },
       { id: 'a15_4', name: 'Hallgrímskirkja + Sun Voyager (se não fez ainda)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Cobre as duas atrações-cartão da cidade caso ontem tenha sido só Þingvellir.' },
       { id: 'a15_5', name: 'Jantar tasting · Dill (Michelin)', type: 'premium', cost: 2200, tiers: [3], desc: 'Primeira estrela Michelin da Islândia. Menu nórdico autoral. Reservar 60+ dias antes.' },
@@ -2404,12 +2425,14 @@ function renderActivityItem(dayIdx, a) {
   if (a.type === 'transport' || a.type === 'lodging') badge = '';
   else if (inTier && included) badge = `<span class="activity-badge included">incluído</span>`;
   else if (!inTier) badge = `<span class="activity-badge ${a.type === 'premium' ? 'upgrade' : 'optional'}">+ adicionar</span>`;
+  // Pill destacada para atividades marcadas explicitamente como opcionais
+  const opcionalPill = a.opcional ? `<span class="opcional-pill">opcional</span>` : '';
   return `
     <li class="activity-item">
-      <div class="activity-checkbox ${included ? 'checked' : ''} ${locked ? 'locked' : ''}" 
+      <div class="activity-checkbox ${included ? 'checked' : ''} ${locked ? 'locked' : ''}"
            onclick="toggleActivity(${dayIdx}, '${a.id}')"></div>
       <div class="activity-main">
-        <div class="activity-name ${!included ? 'disabled' : ''}">${a.name}</div>
+        <div class="activity-name ${!included ? 'disabled' : ''}">${opcionalPill}${a.name}</div>
         <div class="activity-desc">${a.desc}</div>
       </div>
       <div class="activity-meta">
@@ -2955,6 +2978,9 @@ const POI = [
   { lat: 64.8228, lng: -23.3870, name: 'Búðakirkja', type: 'church', desc: 'Igreja preta em campo de lava · aurora spot (D13)' },
   { lat: 64.5500, lng: -20.9700, name: 'Caverna Víðgelmir', type: 'cave', desc: 'Maior tubular de lava acessível (D11)' },
   { lat: 65.7350, lng: -20.6500, name: 'Hvítserkur', type: 'rock', desc: 'Troll petrificado de 15m no mar (D10)' },
+  { lat: 63.9929, lng: -16.8158, name: 'Falljökull (opcional)', type: 'glacier', desc: 'Língua glacial acessível sem guia · perto de Skaftafell (D5)' },
+  { lat: 64.4023, lng: -14.5614, name: 'Hvalnes Beach (opcional)', type: 'beach', desc: 'Praia preta com farol amarelo · entre Höfn e Djúpivogur (D5)' },
+  { lat: 63.8804, lng: -22.4495, name: 'Blue Lagoon (opcional)', type: 'lagoon', desc: 'A lagoa termal mais famosa do mundo · perto de Keflavík (D15-D16)' },
 ];
 
 let mapInstance = null;
