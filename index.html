@@ -256,6 +256,16 @@ h1, h2, h3, h4 {
   opacity: 0.7;
 }
 
+/* Link de aba para página externa (Agendamentos) */
+.tab.tab-link {
+  text-decoration: none;
+  color: var(--aurora-cyan);
+  margin-left: auto;
+}
+.tab.tab-link:hover { color: var(--aurora-green); }
+.tab.tab-link .ext { font-size: 11px; opacity: 0.7; }
+@media (max-width: 640px) { .tab.tab-link { margin-left: 0; } }
+
 /* ============ MAIN ============ */
 main {
   max-width: 1200px;
@@ -1689,6 +1699,7 @@ main {
     <button class="tab" data-tab="aurora">✦ Aurora Boreal</button>
     <button class="tab" data-tab="logistics">⚙ Logística</button>
     <button class="tab" data-tab="checklist">✓ Pré-viagem</button>
+    <a class="tab tab-link" href="agendamentos.html">📋 Agendamentos <span class="ext">↗</span></a>
   </div>
 </nav>
 
@@ -3368,8 +3379,8 @@ function init() {
     p.classList.toggle('active', parseInt(p.dataset.tier) === state.tier);
   });
 
-  // 5. Wire event listeners
-  document.querySelectorAll('.tab').forEach(t => {
+  // 5. Wire event listeners (apenas abas internas com data-tab; links externos ficam de fora)
+  document.querySelectorAll('.tab[data-tab]').forEach(t => {
     t.addEventListener('click', () => showSection(t.dataset.tab));
   });
   document.querySelectorAll('.tier-pill').forEach(p => {
