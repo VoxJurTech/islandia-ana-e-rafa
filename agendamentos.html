@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendamentos antecipados · Islândia · Ana e Rafa · set-out 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:opsz,wght@9..40,300..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #0a0e1a;
+  --bg-night: #0d1220;
+  --bg-card: #131826;
+  --bg-elev: #1a2033;
+  --bg-hover: #20283d;
+  --text-primary: #f5f3ee;
+  --text-secondary: #a8aebc;
+  --text-tertiary: #6b7280;
+  --text-muted: #4a5161;
+  --aurora-green: #4ade80;
+  --aurora-cyan: #67e8f9;
+  --aurora-purple: #a78bfa;
+  --aurora-pink: #f0abfc;
+  --warm: #fb923c;
+  --gold: #fbbf24;
+  --danger: #f87171;
+  --border: #252b3d;
+  --border-strong: #3a4259;
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.6);
+  --radius-sm: 6px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(74,222,128,0.08), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(167,139,250,0.06), transparent 60%);
+  background-attachment: fixed;
+}
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-variation-settings: "opsz" 144;
+}
+.mono { font-family: var(--mono); }
+a { color: inherit; }
+
+/* HERO */
+.hero { position: relative; padding: 64px 24px 40px; border-bottom: 1px solid var(--border); }
+.hero-inner { max-width: 1080px; margin: 0 auto; }
+.eyebrow {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--aurora-green); margin-bottom: 20px;
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--aurora-green); }
+.hero h1 { font-size: clamp(36px, 6vw, 68px); font-weight: 300; margin-bottom: 18px; }
+.hero h1 em { font-style: italic; color: var(--aurora-green); }
+.hero p { font-size: clamp(15px, 1.4vw, 18px); max-width: 720px; color: var(--text-secondary); }
+.hero .backlink {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 24px;
+  font-family: var(--mono); font-size: 12px; color: var(--aurora-cyan);
+  text-decoration: none; border: 1px solid var(--border-strong);
+  padding: 8px 14px; border-radius: 8px; transition: all 0.2s;
+}
+.hero .backlink:hover { background: var(--bg-elev); border-color: var(--aurora-cyan); }
+
+main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 100px; }
+
+/* progress bar */
+.progress-bar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(13,18,32,0.92); backdrop-filter: blur(20px);
+  border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 18px; margin-bottom: 32px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.progress-track { flex: 1; min-width: 160px; height: 8px; background: var(--bg-elev); border-radius: 100px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--aurora-green), var(--aurora-cyan)); transition: width 0.4s; }
+.progress-label { font-family: var(--mono); font-size: 13px; color: var(--text-secondary); white-space: nowrap; }
+.progress-label strong { color: var(--aurora-green); }
+.btn {
+  background: transparent; border: 1px solid var(--border-strong); color: var(--text-secondary);
+  padding: 8px 14px; border-radius: 8px; font-family: var(--sans); font-size: 12px;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.btn:hover { background: var(--bg-elev); color: var(--text-primary); }
+
+/* callouts */
+.callout {
+  background: linear-gradient(135deg, var(--bg-card), rgba(167,139,250,0.04));
+  border: 1px solid var(--border); border-left: 3px solid var(--aurora-purple);
+  border-radius: var(--radius); padding: 18px 22px; margin: 0 0 28px;
+}
+.callout.warn { border-left-color: var(--warm); background: linear-gradient(135deg, var(--bg-card), rgba(251,146,60,0.05)); }
+.callout-title {
+  font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em;
+  color: var(--aurora-purple); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+}
+.callout.warn .callout-title { color: var(--warm); }
+.callout p { color: var(--text-secondary); font-size: 14px; line-height: 1.6; }
+.callout strong { color: var(--text-primary); }
+.callout a { color: var(--aurora-cyan); }
+
+/* section */
+.section-title {
+  font-size: clamp(24px, 3vw, 34px); margin: 44px 0 6px; display: flex; align-items: baseline; gap: 14px;
+}
+.section-title em { font-style: italic; color: var(--aurora-green); }
+.section-title .count { font-family: var(--mono); font-size: 14px; color: var(--text-tertiary); }
+.section-sub { color: var(--text-secondary); font-size: 14px; margin-bottom: 24px; max-width: 760px; }
+
+/* cards */
+.cards { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.card {
+  display: grid; grid-template-columns: 28px 1fr auto; gap: 16px; align-items: start;
+  background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 20px; transition: border-color 0.2s, opacity 0.2s;
+}
+.card:hover { border-color: var(--border-strong); }
+.card.done { opacity: 0.55; }
+.card.done .card-name { text-decoration: line-through; }
+
+.check {
+  width: 22px; height: 22px; border: 1.5px solid var(--border-strong); border-radius: 6px;
+  margin-top: 2px; cursor: pointer; position: relative; transition: all 0.2s; flex-shrink: 0;
+}
+.check.checked { background: var(--aurora-green); border-color: var(--aurora-green); }
+.check.checked::after {
+  content: '✓'; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  color: var(--bg-deep); font-size: 14px; font-weight: 700; line-height: 1;
+}
+
+.card-body { min-width: 0; }
+.card-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.card-name { font-size: 16px; font-weight: 600; color: var(--text-primary); }
+.day-badge {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+  background: var(--bg-elev); color: var(--aurora-green); padding: 3px 8px; border-radius: 5px;
+  border: 1px solid rgba(74,222,128,0.25); white-space: nowrap;
+}
+.card-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+.card-desc .op { color: var(--gold); }
+.card-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.pill {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 5px; border: 1px solid transparent; white-space: nowrap;
+}
+.pill.online { color: var(--aurora-green); background: rgba(74,222,128,0.10); border-color: rgba(74,222,128,0.35); }
+.pill.email { color: var(--aurora-cyan); background: rgba(103,232,249,0.10); border-color: rgba(103,232,249,0.35); }
+.pill.arrival { color: var(--text-secondary); background: var(--bg-elev); border-color: var(--border-strong); }
+.pill.parka { color: var(--aurora-purple); background: rgba(167,139,250,0.10); border-color: rgba(167,139,250,0.35); }
+.pill.season { color: var(--warm); background: rgba(251,146,60,0.10); border-color: rgba(251,146,60,0.40); }
+.pill.lead { color: var(--gold); background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.35); }
+.pill.opt { color: var(--aurora-pink); background: rgba(240,171,252,0.08); border-color: rgba(240,171,252,0.30); }
+.cost { font-family: var(--mono); font-size: 12px; color: var(--text-tertiary); }
+
+.card-side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; min-width: 140px; }
+.book-btn {
+  display: inline-flex; align-items: center; gap: 7px; text-decoration: none;
+  background: var(--aurora-green); color: var(--bg-deep); font-weight: 700;
+  padding: 9px 15px; border-radius: 8px; font-size: 13px; font-family: var(--sans);
+  transition: all 0.2s; white-space: nowrap;
+}
+.book-btn:hover { background: var(--aurora-cyan); transform: translateY(-1px); }
+.book-btn.ghost { background: transparent; color: var(--aurora-cyan); border: 1px solid var(--border-strong); font-weight: 500; }
+.book-btn.ghost:hover { background: var(--bg-elev); border-color: var(--aurora-cyan); transform: none; }
+.alt-link { font-family: var(--mono); font-size: 11px; color: var(--text-tertiary); text-decoration: none; }
+.alt-link:hover { color: var(--aurora-cyan); }
+
+@media (max-width: 720px) {
+  .card { grid-template-columns: 24px 1fr; }
+  .card-side { grid-column: 1 / -1; align-items: flex-start; flex-direction: row; flex-wrap: wrap; margin-top: 4px; }
+}
+
+footer { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
+.footnote { font-size: 12px; color: var(--text-tertiary); font-style: italic; font-family: var(--serif); line-height: 1.7; }
+.footnote a { color: var(--aurora-cyan); }
+
+/* PRINT */
+@media print {
+  body { background: #fff !important; color: #1a1a1a !important; background-image: none !important; }
+  .progress-bar, .btn, .hero .backlink { display: none !important; }
+  .card, .callout { background: #fff !important; border-color: #ccc !important; page-break-inside: avoid; }
+  .card-name, h1, h2 { color: #1a1a1a !important; }
+  .card-desc, .hero p, .callout p { color: #333 !important; }
+  .book-btn { background: #fff !important; color: #1f6f3a !important; border: 1px solid #1f6f3a !important; }
+  .book-btn::after { content: ' (' attr(href) ')'; font-family: monospace; font-size: 9px; font-weight: 400; }
+  a { color: #1a1a1a !important; }
+  @page { size: A4 portrait; margin: 14mm; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Reservas antecipadas · Ana &amp; Rafa</div>
+    <h1>O que <em>agendar antes</em> de viajar</h1>
+    <p>Tudo do roteiro que vale (ou exige) reserva antecipada — passeios, banhos termais e pernoites — com o link direto pra reservar/pagar online. Marque conforme for fechando; o progresso fica salvo neste navegador. Datas da viagem: <strong class="mono">27/09 → 11/10 2026</strong>.</p>
+    <a class="backlink" href="index.html">← Voltar ao roteiro completo</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="progress-bar">
+    <span class="progress-label"><strong id="doneCount">0</strong> de <span id="totalCount">0</span> reservados</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <button class="btn" onclick="window.print()">⎙ Imprimir / PDF</button>
+    <button class="btn" onclick="resetChecks()">↺ Limpar marcações</button>
+  </div>
+
+  <div class="callout warn">
+    <div class="callout-title">⚠ Leia antes · sobre campings na Islândia</div>
+    <p>Ao contrário dos passeios, <strong>a maioria dos campings islandeses NÃO aceita reserva online</strong> — você paga na chegada (cartão) ou pelo <strong>app Parka</strong>, e raramente há como "garantir vaga" antes. O que dá pra fazer com antecedência é: (1) confirmar que o camping <strong>estará aberto em outubro</strong> via <a href="https://www.park4night.com" target="_blank" rel="noopener">Park4Night</a>; (2) baixar o <a href="https://parka.is" target="_blank" rel="noopener">app Parka</a> pra pagar; (3) avaliar o <a href="https://www.campingcard.is" target="_blank" rel="noopener">Camping Card</a>. A exceção do roteiro é o <strong>Reykjavík Eco Campsite</strong> (esse pede pré-reserva no site). Por isso os campings aparecem aqui como "pagar na chegada / Parka", e não com botão de reserva — exceto onde realmente existe.</p>
+  </div>
+
+  <div class="callout">
+    <div class="callout-title">◈ Como priorizar</div>
+    <p>Reserve primeiro o que <strong>esgota ou fecha na borda de temporada (outubro)</strong>: Silfra, whale watching de Húsavík, passeio de barco em Jökulsárlón, glacier hikes, Blue Lagoon e Sky Lagoon. Restaurante <strong>Dill</strong> (Michelin) pede 1–2 meses. Os banhos e a caverna Víðgelmir, ~1 semana. As etiquetas <span class="pill lead" style="display:inline-block">antecedência</span> e <span class="pill season" style="display:inline-block">fim de temporada</span> sinalizam urgência.</p>
+  </div>
+
+  <!-- ============ PASSEIOS ============ -->
+  <h2 class="section-title">Passeios &amp; experiências <span class="count" id="toursCount"></span></h2>
+  <p class="section-sub">Reserváveis online direto no operador oficial. Valores são referência para <strong>2 pessoas</strong> (do roteiro) — confirme o preço atual no site. Itens marcados <span style="color:var(--gold)">opcional/premium</span> dependem do tier escolhido.</p>
+  <div class="cards" id="toursCards"></div>
+
+  <!-- ============ CAMPINGS ============ -->
+  <h2 class="section-title">Campings &amp; pernoite <span class="count" id="campsCount"></span></h2>
+  <p class="section-sub">Na Islândia, campings = pagar na chegada / app Parka. A ação antecipada é confirmar abertura em outubro (Park4Night) e ter o Parka instalado. Só o de Reykjavík tem reserva online de verdade.</p>
+  <div class="cards" id="campsCards"></div>
+
+</main>
+
+<footer>
+  <p class="footnote">
+    Links verificados em mai/2026 para os sites oficiais dos operadores. Preços e disponibilidade mudam — sempre confirme no site antes de pagar. Combustível, mercado (Bonus) e estacionamentos (Þingvellir, Kerið, Vestrahorn/Stokksnes) são pagos no local e não entram aqui. Documentos (passaporte, ETIAS, PID, seguro, eTA/visto do Canadá pela conexão em Montreal) estão na aba <a href="index.html">Pré-viagem do roteiro</a>.
+  </p>
+</footer>
+
+<script>
+const STORAGE_KEY = 'islandia_agendamentos_v1';
+
+// status pills: online | email | arrival | parka | season | lead | opt
+const TOURS = [
+  { id: 'silfra', day: 'Dia 3 · 28/09', name: 'Silfra · snorkel entre placas tectônicas', cost: 'ref. R$ 1.700 (snorkel) · 2 pax',
+    desc: 'Snorkel (sem certificação) ou mergulho (exige PADI/drysuit) na água mais transparente do mundo, em Þingvellir. Drysuit incluso.',
+    pills: ['online','lead'], url: 'https://www.dive.is/diving-snorkeling-tours/snorkeling-day-tours/silfra-snorkeling-day-tour', op: 'DIVE.IS',
+    alt: { label: 'alt: Arctic Adventures', url: 'https://adventures.is/iceland/day-tours/snorkeling-and-diving/' } },
+
+  { id: 'solheima', day: 'Dia 4 · 29/09', name: 'Glacier hike em Sólheimajökull', cost: 'ref. R$ 1.900 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional/premium.</span> Caminhada guiada de ~3h com crampons na língua glacial, perto de Vík.',
+    pills: ['online','season'], url: 'https://adventures.is/iceland/day-tours/glacier-tours/solheimajokull-glacier-tours/', op: 'Arctic Adventures' },
+
+  { id: 'skaftafell', day: 'Dia 5 · 30/09', name: 'Glacier hike em Skaftafell (Vatnajökull)', cost: 'ref. R$ 2.200 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional/premium.</span> Tour de 3–5h em geleira azul dentro do Parque Nacional Vatnajökull. Equipamento incluso.',
+    pills: ['online','season'], url: 'https://www.glacierguides.is/', op: 'Glacier Guides',
+    alt: { label: 'alt: Icelandic Mountain Guides', url: 'https://www.mountainguides.is/tour/ice-cave-skaftafell' } },
+
+  { id: 'jokulsarlon', day: 'Dia 5 · 30/09', name: 'Passeio de barco em Jökulsárlón', cost: 'ref. R$ 850 · 2 pax',
+    desc: '~40 min em barco anfíbio entre os icebergs da lagoa glacial. <strong>Última temporada opera até meados de outubro</strong> — reserve já e confirme a data.',
+    pills: ['online','season'], url: 'https://icelagoon.is/', op: 'icelagoon.is' },
+
+  { id: 'myvatnbaths', day: 'Dia 8 · 03/10', name: 'Banhos termais de Mývatn (Earth Lagoon)', cost: 'ref. R$ 580 · 2 pax',
+    desc: 'A versão norte e mais barata da Blue Lagoon. <strong>Atenção:</strong> rebatizado "Earth Lagoon" e passou por reforma — <strong>confirme se reabriu</strong> antes de contar com ele.',
+    pills: ['online','season'], url: 'https://www.earthlagoon.is/book-ticket', op: 'Earth Lagoon (ex-Mývatn Nature Baths)' },
+
+  { id: 'forestlagoon', day: 'Dia 9 · 04/10', name: 'Forest Lagoon (Akureyri)', cost: 'ref. R$ 580 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional.</span> Banho geotermal recente dentro de uma floresta, mais íntimo e moderno. Reserva de horário recomendada.',
+    pills: ['online'], url: 'https://www.forestlagoon.is', op: 'Forest Lagoon' },
+
+  { id: 'whale', day: 'Dia 10 · 05/10', name: 'Whale watching em Húsavík', cost: 'ref. R$ 800–1.700 · 2 pax',
+    desc: 'Capital mundial da observação de baleias. ~3h em barco de madeira (tradicional) ou RIB (premium). Set/out ainda tem ótima chance de jubartes. <strong>Temporada afunilando</strong> — reserve.',
+    pills: ['online','season'], url: 'https://www.northsailing.is/book-a-tour/', op: 'North Sailing',
+    alt: { label: 'alt: Gentle Giants', url: 'https://www.gentlegiants.is/' } },
+
+  { id: 'vidgelmir', day: 'Dia 11 · 06/10', name: 'Caverna de lava Víðgelmir', cost: 'ref. R$ 1.300 · 2 pax',
+    desc: 'Tour guiado de 1h30 na maior caverna de lava acessível da Islândia. <strong>Reserve com ~1 semana</strong> — os horários são limitados.',
+    pills: ['online','lead'], url: 'https://thecave.is/', op: 'The Cave' },
+
+  { id: 'krauma', day: 'Dia 11 · 06/10', name: 'Krauma · banho geotermal de Deildartunguhver', cost: 'ref. R$ 750 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional/premium.</span> Banho moderno alimentado pela maior fonte termal da Europa. Mais tranquilo que os populares.',
+    pills: ['online'], url: 'https://www.krauma.is/en', op: 'Krauma' },
+
+  { id: 'vatnshellir', day: 'Dia 13 · 08/10', name: 'Caverna Vatnshellir (Snæfellsnes)', cost: 'ref. R$ 750 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional/premium.</span> Tour guiado de 45 min dentro de um tubo de lava, no Parque Nacional Snæfellsjökull.',
+    pills: ['online'], url: 'https://www.summitguides.is/vatnshellir-cave-tour', op: 'Summit Adventure Guides' },
+
+  { id: 'skylagoon', day: 'Dia 15 · 10/10', name: 'Sky Lagoon (ritual de 7 estágios)', cost: 'ref. R$ 980 · 2 pax',
+    desc: 'Banho geotermal de luxo na borda do oceano, perto de Reykjavík. Reserve o horário — lota no fim de tarde (pôr do sol).',
+    pills: ['online','lead'], url: 'https://www.skylagoon.com/booking/', op: 'Sky Lagoon' },
+
+  { id: 'bluelagoon', day: 'Dia 15 · 10/10', name: 'Blue Lagoon (a clássica)', cost: 'ref. R$ 1.100 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional.</span> A lagoa termal mais famosa do mundo. <strong>Pré-reserva é obrigatória e esgota</strong> — feche com 1+ mês. Encaixe no dia 10/10 (o voo de volta sai cedo no 11/10).',
+    pills: ['online','lead'], url: 'https://www.bluelagoon.com/day-visit/the-blue-lagoon', op: 'Blue Lagoon' },
+
+  { id: 'dill', day: 'Dia 15 · 10/10', name: 'Jantar Dill (estrela Michelin)', cost: 'ref. R$ 2.200 · 2 pax', opt: true,
+    desc: '<span class="op">Opcional/premium.</span> Primeira estrela Michelin da Islândia, menu nórdico autoral. <strong>Reserve 1–2 meses antes</strong> — poucos lugares.',
+    pills: ['online','lead'], url: 'https://dillrestaurant.is', op: 'Dill Restaurant' },
+];
+
+const CAMPS = [
+  { id: 'c_rvk', day: 'Dia 14 · 09/10', name: 'Reykjavík Eco Campsite (última noite no motorhome)', cost: 'ref. R$ 350/noite',
+    desc: '<strong>Única exceção:</strong> esse pede pré-reserva no site (e dá o código de acesso). Central, aberto o ano todo. Você dorme aqui antes de devolver o motorhome em 10/10.',
+    pills: ['online'], url: 'https://www.reykjavikcampsite.is', op: 'reykjavikcampsite.is' },
+
+  { id: 'c_djupivogur', day: 'Dia 5 · 30/09', name: 'Camping Djúpivogur', cost: 'ref. R$ 290/noite',
+    desc: 'Pequeno e charmoso, com piscina geotérmica ao lado. Confirme abertura em outubro no Park4Night; pague na chegada / Parka.',
+    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_seydis', day: 'Dia 6 · 01/10', name: 'Camping Seyðisfjörður', cost: 'ref. R$ 290/noite',
+    desc: 'No centro da vila colorida. Sem reserva online — pague na chegada / Parka. Confirme abertura (borda de temporada).',
+    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_myvatn', day: 'Dias 7 e 8 · 02–03/10', name: 'Camping Mývatn (Bjarg)', cost: 'ref. R$ 320/noite × 2',
+    desc: 'Na beira do lago, vista incrível. O próprio camping avisa: "não precisa reservar, sempre há espaço". Pague na chegada / Parka. Duas noites.',
+    pills: ['arrival','parka'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_husavik', day: 'Dia 9 · 04/10', name: 'Camping Húsavík', cost: 'ref. R$ 290/noite',
+    desc: 'Pequeno e central, perto do porto das baleias. Pague na chegada / Parka. Confirme abertura em outubro.',
+    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_hofsos', day: 'Dia 10 · 05/10', name: 'Camping Hofsós', cost: 'ref. R$ 290/noite',
+    desc: 'Simples, ao lado da famosa piscina de borda infinita. Pague na chegada / Parka. Confirme abertura (fim de temporada).',
+    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_grundar', day: 'Dia 12 · 07/10', name: 'Camping Grundarfjörður', cost: 'ref. R$ 290/noite',
+    desc: 'Municipal, na base do Kirkjufell. <strong>Fecha no início de outubro</strong> — confirme com atenção; tenha um plano B na Snæfellsnes.',
+    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+
+  { id: 'c_hellnar', day: 'Dia 13 · 08/10', name: 'Camping Hellnar (Hellnar Country Hotel)', cost: 'ref. R$ 290/noite',
+    desc: 'Vila com 9 casas, ligado ao Hellnar Country Hotel. <strong>Fecha por volta de meados de outubro</strong> — vale ligar/e-mail pra confirmar abertura e vaga.',
+    pills: ['email','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+];
+
+function statusPill(type) {
+  const map = {
+    online:  ['online',  'Reserva online'],
+    email:   ['email',   'Por e-mail / tel'],
+    arrival: ['arrival', 'Pagar na chegada'],
+    parka:   ['parka',   'App Parka'],
+    season:  ['season',  'Fim de temporada'],
+    lead:    ['lead',    'Reserve com antecedência'],
+    opt:     ['opt',     'Opcional'],
+  };
+  const m = map[type]; if (!m) return '';
+  return `<span class="pill ${m[0]}">${m[1]}</span>`;
+}
+
+function cardHTML(item) {
+  const pills = (item.pills || []).map(statusPill).join('');
+  const optPill = item.opt ? statusPill('opt') : '';
+  const alt = item.alt ? `<a class="alt-link" href="${item.alt.url}" target="_blank" rel="noopener">${item.alt.label} ↗</a>` : '';
+  const checked = !!state[item.id];
+  const isCampNoBook = (item.pills || []).includes('arrival');
+  const btnClass = isCampNoBook ? 'book-btn ghost' : 'book-btn';
+  const btnLabel = isCampNoBook ? '⌖ Park4Night' : 'Reservar ↗';
+  return `
+    <div class="card ${checked ? 'done' : ''}" id="card-${item.id}">
+      <div class="check ${checked ? 'checked' : ''}" onclick="toggle('${item.id}')" title="Marcar como reservado"></div>
+      <div class="card-body">
+        <div class="card-head">
+          <span class="day-badge">${item.day}</span>
+          <span class="card-name">${item.name}</span>
+        </div>
+        <div class="card-desc">${item.desc}</div>
+        <div class="card-meta">${optPill}${pills}<span class="cost">${item.cost}</span></div>
+      </div>
+      <div class="card-side">
+        <a class="${btnClass}" href="${item.url}" target="_blank" rel="noopener">${btnLabel}</a>
+        <span class="cost">${item.op}</span>
+        ${alt}
+      </div>
+    </div>`;
+}
+
+let state = {};
+function load() { try { state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch(e) { state = {}; } }
+function save() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {} }
+
+function render() {
+  document.getElementById('toursCards').innerHTML = TOURS.map(cardHTML).join('');
+  document.getElementById('campsCards').innerHTML = CAMPS.map(cardHTML).join('');
+  document.getElementById('toursCount').textContent = '· ' + TOURS.length + ' itens';
+  document.getElementById('campsCount').textContent = '· ' + CAMPS.length + ' itens';
+  updateProgress();
+}
+
+function toggle(id) {
+  state[id] = !state[id];
+  save();
+  const all = [...TOURS, ...CAMPS].find(x => x.id === id);
+  const card = document.getElementById('card-' + id);
+  const chk = card.querySelector('.check');
+  card.classList.toggle('done', state[id]);
+  chk.classList.toggle('checked', state[id]);
+  updateProgress();
+}
+
+function updateProgress() {
+  const all = [...TOURS, ...CAMPS];
+  const done = all.filter(x => state[x.id]).length;
+  document.getElementById('doneCount').textContent = done;
+  document.getElementById('totalCount').textContent = all.length;
+  document.getElementById('progressFill').style.width = (done / all.length * 100) + '%';
+}
+
+function resetChecks() {
+  if (!confirm('Limpar todas as marcações de reserva?')) return;
+  state = {}; save(); render();
+}
+
+load();
+render();
+</script>
+</body>
+</html>
