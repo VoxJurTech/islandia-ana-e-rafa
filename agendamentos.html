@@ -269,24 +269,23 @@ const TOURS = [
     alt: { label: 'alt: Icelandic Mountain Guides', url: 'https://www.mountainguides.is/tour/ice-cave-skaftafell' } },
 
   { id: 'myvatnbaths', day: 'Dia 8 · 03/10', name: 'Banhos termais de Mývatn (Earth Lagoon)', cost: 'ref. R$ 580 · 2 pax',
-    desc: 'A versão norte e mais barata da Blue Lagoon. <strong>Atenção:</strong> rebatizado "Earth Lagoon" e passou por reforma — <strong>confirme se reabriu</strong> antes de contar com ele.',
+    desc: 'A versão norte e mais barata da Blue Lagoon. Reabriu em jul/2026 como "Earth Lagoon" (abertura faseada — confirme o horário no site). <strong>⏰ Slot sugerido: ~17h30</strong> (relaxar ao anoitecer, perto do camping/aurora).',
     pills: ['online','season'], url: 'https://www.earthlagoon.is/book-ticket', op: 'Earth Lagoon (ex-Mývatn Nature Baths)' },
 
   { id: 'forestlagoon', day: 'Dia 9 · 04/10', name: 'Forest Lagoon (Akureyri)', cost: 'ref. R$ 580 · 2 pax', opt: true,
-    desc: '<span class="op">Opcional.</span> Banho geotermal recente dentro de uma floresta, mais íntimo e moderno. Reserva de horário recomendada.',
+    desc: '<span class="op">Opcional.</span> Banho geotermal recente dentro de uma floresta, mais íntimo e moderno. Abre 10h–24h. <strong>⏰ Slot sugerido: ~16h00</strong> (depois de Akureyri, antes de rodar pra Húsavík).',
     pills: ['online'], url: 'https://www.forestlagoon.is', op: 'Forest Lagoon' },
 
-  { id: 'whale', day: 'Dia 10 · 05/10', name: 'Whale watching em Húsavík', cost: 'ref. R$ 800–1.700 · 2 pax',
-    desc: 'Capital mundial da observação de baleias. ~3h em barco de madeira (tradicional) ou RIB (premium). Set/out ainda tem ótima chance de jubartes. <strong>Temporada afunilando</strong> — reserve.',
-    pills: ['online','season'], url: 'https://www.northsailing.is/book-a-tour/', op: 'North Sailing',
-    alt: { label: 'alt: Gentle Giants', url: 'https://www.gentlegiants.is/' } },
+  { id: 'whale', day: 'Dia 10 · 05/10', name: 'Whale watching em RIB · Gentle Giants', cost: 'ref. R$ 1.700 · 2 pax',
+    desc: 'Lancha rápida RIB (máx. 12), ~2h — a "Big Whale Safari" da <strong>Gentle Giants</strong>, pioneira do RIB em Húsavík. <strong>Reserve o tour da manhã (~8h30–9h):</strong> mar mais calmo e melhor luz (crucial num RIB), e sobra o dia pra rodar até Hofsós. Temporada até 31/10 — reserve com antecedência.',
+    pills: ['online','lead','season'], url: 'https://www.gentlegiants.is/tours-and-bookings/', op: 'Gentle Giants (RIB)' },
 
   { id: 'vidgelmir', day: 'Dia 11 · 06/10', name: 'Caverna de lava Víðgelmir', cost: 'ref. R$ 1.300 · 2 pax',
     desc: 'Tour guiado de 1h30 na maior caverna de lava acessível da Islândia. <strong>Reserve com ~1 semana</strong> — os horários são limitados.',
     pills: ['online','lead'], url: 'https://thecave.is/', op: 'The Cave' },
 
   { id: 'krauma', day: 'Dia 11 · 06/10', name: 'Krauma · banho geotermal de Deildartunguhver', cost: 'ref. R$ 750 · 2 pax', opt: true,
-    desc: '<span class="op">Opcional/premium.</span> Banho moderno alimentado pela maior fonte termal da Europa. Mais tranquilo que os populares.',
+    desc: '<span class="op">Opcional/premium.</span> Banho moderno alimentado pela maior fonte termal da Europa. Mais tranquilo que os populares. Abre 11h–21h. <strong>⏰ Slot sugerido: ~17h30–18h00</strong> (fecho do dia antes de Borgarnes).',
     pills: ['online'], url: 'https://www.krauma.is/en', op: 'Krauma' },
 
   { id: 'vatnshellir', day: 'Dia 13 · 08/10', name: 'Caverna Vatnshellir (Snæfellsnes)', cost: 'ref. R$ 750 · 2 pax', opt: true,
@@ -294,11 +293,11 @@ const TOURS = [
     pills: ['online'], url: 'https://www.summitguides.is/vatnshellir-cave-tour', op: 'Summit Adventure Guides' },
 
   { id: 'skylagoon', day: 'Dia 15 · 10/10', name: 'Sky Lagoon (ritual de 7 estágios)', cost: 'ref. R$ 980 · 2 pax',
-    desc: 'Banho geotermal de luxo na borda do oceano, perto de Reykjavík. Reserve o horário — lota no fim de tarde (pôr do sol).',
+    desc: 'Banho geotermal de luxo na borda do oceano, perto de Reykjavík. Abre 9h–22h (até 20/10). <strong>⏰ Slot sugerido: ~16h00–16h30</strong> pra pegar o pôr do sol (~18h10) de dentro da lagoa — o auge da experiência.',
     pills: ['online','lead'], url: 'https://www.skylagoon.com/booking/', op: 'Sky Lagoon' },
 
   { id: 'bluelagoon', day: 'Dia 15 · 10/10', name: 'Blue Lagoon (a clássica)', cost: 'ref. R$ 1.100 · 2 pax', opt: true,
-    desc: '<span class="op">Opcional.</span> A lagoa termal mais famosa do mundo. <strong>Pré-reserva é obrigatória e esgota</strong> — feche com 1+ mês. Encaixe no dia 10/10 (o voo de volta sai cedo no 11/10).',
+    desc: '<span class="op">Opcional.</span> A lagoa termal mais famosa do mundo. <strong>Pré-reserva é obrigatória e esgota</strong> — feche com 1+ mês. Abre 8h–22h. Se escolher a Blue no lugar da Sky: sem motorhome (devolvido 09h30), vá de transfer e <strong>⏰ reserve slot ~11h–12h</strong> no dia 10/10.',
     pills: ['online','lead'], url: 'https://www.bluelagoon.com/day-visit/the-blue-lagoon', op: 'Blue Lagoon' },
 
   { id: 'dill', day: 'Dia 15 · 10/10', name: 'Jantar Dill (estrela Michelin)', cost: 'ref. R$ 2.200 · 2 pax', opt: true,

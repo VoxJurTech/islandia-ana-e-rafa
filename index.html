@@ -1971,7 +1971,7 @@ const DAYS = [
       { id: 'a8_3', name: 'Hverir (campo geotermal)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Fumarolas, terreno laranja, cheiro de enxofre forte. Quase paisagem marciana.' },
       { id: 'a8_4', name: 'Vulcão Hverfjall (caminhada)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Subida de 30 min até a cratera. Caminhe ao redor (1h adicional). Vista 360º incrível.' },
       { id: 'a8_8', name: 'Krafla · Víti + Leirhnjúkur', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Caldeira vulcânica ~15 min ao norte do lago Mývatn. Víti é uma cratera com lago verde-esmeralda; Leirhnjúkur é um campo de lava ainda fumegante da erupção dos anos 1980, com trilha entre fumarolas. Gratuito e fácil de encaixar no dia inteiro de Mývatn — só não estava listado porque o dia já é cheio.' },
-      { id: 'a8_5', name: 'Mývatn Nature Baths', type: 'paid', cost: 580, tiers: [2,3], desc: 'Lagoa termal a 36–40°C com vista da paisagem vulcânica. Mais barato e menos turístico que Blue Lagoon.' },
+      { id: 'a8_5', name: 'Earth Lagoon (Mývatn Nature Baths)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Lagoa termal a 36–40°C com vista da paisagem vulcânica. Mais barato e menos turístico que Blue Lagoon. Reaberto em jul/2026 como "Earth Lagoon" (abertura faseada — confirme o horário em earthlagoon.is). ⏰ Reserve o slot ~17h30: faça os vulcões de dia e relaxe ao anoitecer, já pertinho do camping/aurora. O horário do ticket é só a CHEGADA — você fica até fechar.' },
       { id: 'a8_6', name: 'Caverna Grjótagjá', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Caverna com fonte termal subterrânea (cena famosa de Game of Thrones). Banho proibido.' },
     ],
     side: { lodging: 'Camping Mývatn (2ª noite)', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · 2ª chance · Hverir e Dimmuborgir como foreground' }
@@ -1984,7 +1984,7 @@ const DAYS = [
     activities: [
       { id: 'a9_1', name: 'Goðafoss', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'Cachoeira em ferradura. Acesso pelos dois lados (oeste e leste). Combine os dois pra fotos completas.', forced: true },
       { id: 'a9_2', name: 'Jardim Botânico Akureyri + Catedral', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Jardim botânico surpreendente pra latitude. Catedral modernista com vitrais ingleses do séc. XIX (vieram da Catedral de Coventry).' },
-      { id: 'a9_3', name: 'Forest Lagoon (Akureyri)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Banho geotermal recente, dentro de uma floresta. Mais íntimo e moderno.' },
+      { id: 'a9_3', name: 'Forest Lagoon (Akureyri)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Banho geotermal recente, dentro de uma floresta. Mais íntimo e moderno. Abre 10h–24h. ⏰ Reserve o slot ~16h00: depois de Goðafoss + Akureyri, e antes de ~1h de estrada até Húsavík (baleias são cedo no Dia 10).' },
       { id: 'a9_4', name: 'Whale Museum (Húsavík)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Esqueletos reais montados, super didático. Vale a hora.' },
       { id: 'a9_5', name: 'Camping Húsavík', type: 'lodging', reserve: true,cost: 290, tiers: [1,2,3], desc: 'Camping pequeno mas central.' },
     ],
@@ -1996,9 +1996,7 @@ const DAYS = [
     aurora: 5,
     narrative: 'Manhã do whale watching — atração principal da Húsavík. Setembro/outubro ainda tem ótima chance de jubartes residentes e às vezes orcas. Tarde rodando pela península Tröllaskagi (estradas cênicas pouco turísticas, com Hvítserkur de bônus pelo caminho) até Hofsós, com sua piscina geotermal famosa de borda infinita debruçada sobre o fiorde.',
     activities: [
-      { id: 'a10_1', name: 'Whale watching tradicional', type: 'paid', cost: 1100, tiers: [2], desc: '~3h em barco de madeira (Eldingar ou North Sailing). Setembro/outubro: jubartes residentes + chance de orcas. Casaco térmico fornecido.' },
-      { id: 'a10_2', name: 'Whale watching premium em RIB', type: 'premium', cost: 1700, tiers: [3], desc: 'Lancha rápida (RIB), grupo menor, ~2h. Mais ágil pra perseguir avistamentos.' },
-      { id: 'a10_3', name: 'Whale watching econômico (combo museu)', type: 'paid', cost: 800, tiers: [1], desc: 'Operadoras menores como Gentle Giants têm opção mais barata. Mesma janela de avistamento.' },
+      { id: 'a10_2', name: 'Whale watching em RIB · Gentle Giants (manhã)', type: 'premium', cost: 1700, tiers: [1,2,3], desc: 'Lancha rápida (RIB), grupo pequeno (máx. 12), ~2h — mais ágil pra perseguir avistamentos. Operadora: <strong>Gentle Giants</strong>, a pioneira do RIB em Húsavík (tour "Big Whale Safari"); a North Sailing só tem barco de madeira. Ponto de encontro: bilheteria da Gentle Giants no centro (bandeiras azuis). ⏰ Reserve o tour da MANHÃ (~8h30–9h): mar mais calmo e melhor luz — crucial num RIB — e sobra o dia pra rodar até Hofsós. Roupa térmica fornecida; idade mín. 8 anos. Reserve em gentlegiants.is.' },
       { id: 'a10_4', name: 'Hvítserkur (parada de estrada)', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'Pilar de pedra de 15m emergindo do mar — troll petrificado pelo sol da manhã, segundo a lenda. 20 min de parada.' },
       { id: 'a10_5', name: 'Síldarminjasafnið (Museu do Arenque, Siglufjörður)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Vencedor do European Museum of the Year. História da era do arenque. Surpreendentemente bom.' },
       { id: 'a10_6', name: 'Piscina geotermal de Hofsós', type: 'paid', cost: 90, tiers: [1,2,3], desc: 'Piscina de borda infinita debruçada sobre o fiorde. Uma das mais bonitas da Islândia. Boa pra noite — entra na água com lua minguante e fica de olho na aurora.', forced: true },
@@ -2015,7 +2013,7 @@ const DAYS = [
       { id: 'a11_1', name: 'Caverna de lava Víðgelmir', type: 'paid', cost: 1300, tiers: [2,3], desc: 'Tour guiado de 1h30 dentro da maior caverna de lava acessível da Islândia. Capacete e lanterna fornecidos. Operadora: The Cave. Reserve com 1 semana de antecedência.' },
       { id: 'a11_2', name: 'Hraunfossar & Barnafoss', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Cachoeiras gêmeas: Hraunfossar emerge diretamente da lava, Barnafoss é uma cascata frenética em fenda estreita. 30 min total.', forced: true },
       { id: 'a11_6', name: 'Fosslaug · fonte termal natural (Reykjafoss)', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Pequena poça termal natural de pedra ao lado da cachoeira Reykjafoss, perto de Varmahlíð (Skagafjörður), no caminho de Hofsós pra Borgarnes. Gratuita e rústica, sem estrutura (troca de roupa no carro) e uma curta caminhada do estacionamento. Soak tranquilo fora das multidões — leve sapato de água. Ficou de fora por ser um desvio "de banho", não um ponto turístico.' },
-      { id: 'a11_3', name: 'Krauma (banho geotermal de Deildartunguhver)', type: 'paid', cost: 750, tiers: [3], desc: 'Banho moderno alimentado pela maior fonte termal da Europa. Mais arquitetônico e tranquilo que os populares.' },
+      { id: 'a11_3', name: 'Krauma (banho geotermal de Deildartunguhver)', type: 'paid', cost: 750, tiers: [3], desc: 'Banho moderno alimentado pela maior fonte termal da Europa. Mais arquitetônico e tranquilo que os populares. Abre 11h–21h. ⏰ Reserve o slot ~17h30–18h00, como fecho do dia (fica coladinha em Víðgelmir/Hraunfossar) antes dos ~30 min até Borgarnes.' },
       { id: 'a11_4', name: 'Camping Borgarnes', type: 'lodging', cost: 290, tiers: [1,2], desc: 'Camping urbano. Borgarnes tem bom mercado pra reabastecer antes da Snæfellsnes.' },
       { id: 'a11_5', name: 'Hotel rural em Borgarnes', type: 'lodging', cost: 1100, tiers: [3], desc: 'Hótel Hamar ou Icelandair Hotel Hamar — comum entre passeios de motorhome quando o usuário quer cama de verdade na metade da viagem.' },
     ],
@@ -2074,8 +2072,8 @@ const DAYS = [
     narrative: 'Manhã: devolução do motorhome na McRent às 09:30 (tanque cheio, água suja descartada, limpeza básica — chegue com folga). A partir daí vocês ficam a pé/táxi: deixam a bagagem no hotel (ainda a definir) e dão a última volta por Reykjavík. Sky Lagoon (ritual de 7 estágios, banho geotermal de luxo com vista do mar) e/ou compras na Laugavegur (lopapeysa, chocolate Omnom, vodka islandesa Reyka). Jantar especial — vocês merecem. Pernoite no hotel pra encarar o voo cedo amanhã (11/10, 09:15).',
     activities: [
       { id: 'a15_1', name: 'Devolução do motorhome na McRent · 09:30', type: 'transport', cost: 0, tiers: [1,2,3], desc: 'Devolução agendada para 09:30, no mesmo depósito da retirada (Reykjavík/Kópavogur). Tanque cheio, água suja descartada, limpeza básica. Combine transfer/táxi até o hotel no centro. Reserve folga — a vistoria pode demorar.', forced: true },
-      { id: 'a15_2', name: 'Sky Lagoon (ritual de 7 estágios)', type: 'premium', cost: 980, tiers: [2,3], desc: 'Banho geotermal de luxo na borda do oceano. Vista do pôr-do-sol. Ritual sauna→vapor→duche frio→máscara→infusão. ~3h. Reservar antecedência.' },
-      { id: 'a15_10', name: 'Blue Lagoon (a clássica)', type: 'premium', cost: 1100, tiers: [1,2,3], opcional: true, desc: 'A lagoa termal mais famosa do mundo, perto de Keflavík (~50 min de RVK). Águas leitosas com sílica, máscara de algas, banho no meio do campo de lava. Mais lotada e cara que Sky Lagoon, mas é "o lugar" — vale se nunca foi. Reservar com 1+ mês de antecedência. Como o voo de volta sai cedo (11/10, 09:15), encaixe a Blue Lagoon hoje (10/10) — não dá tempo no dia do voo.' },
+      { id: 'a15_2', name: 'Sky Lagoon (ritual de 7 estágios)', type: 'premium', cost: 980, tiers: [2,3], desc: 'Banho geotermal de luxo na borda do oceano. Ritual sauna→vapor→duche frio→máscara→infusão. ~2–3h. Abre 9h–22h (essa faixa vale até 20/10). ⏰ Reserve o slot ~16h00–16h30 pra pegar o pôr do sol (~18h10) de dentro da lagoa — é o auge da experiência. Reserve com antecedência.' },
+      { id: 'a15_10', name: 'Blue Lagoon (a clássica)', type: 'premium', cost: 1100, tiers: [1,2,3], opcional: true, desc: 'A lagoa termal mais famosa do mundo, perto de Keflavík (~50 min de RVK). Águas leitosas com sílica, máscara de algas, banho no meio do campo de lava. Mais lotada e cara que Sky Lagoon, mas é "o lugar" — vale se nunca foi. Reservar com 1+ mês de antecedência. Como o voo de volta sai cedo (11/10, 09:15), encaixe a Blue Lagoon hoje (10/10) — não dá tempo no dia do voo. Abre 8h–22h. ⏰ Se escolher a Blue no lugar da Sky: sem o motorhome (devolvido 09h30), vá de transfer/ônibus e reserve slot ~11h–12h.' },
       { id: 'a15_3', name: 'Laugavegur (compras) + Sandholt (café)', type: 'paid', cost: 800, tiers: [1,2,3], desc: 'Suéter lopapeysa (Handknitting Association), chocolate Omnom, vodka Reyka, bottlebrush de musgo. Sandholt é a melhor padaria.' },
       { id: 'a15_4', name: 'Hallgrímskirkja + Sun Voyager (se não fez ainda)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Cobre as duas atrações-cartão da cidade caso ontem tenha sido só Þingvellir.' },
       { id: 'a15_5', name: 'Jantar tasting · Dill (Michelin)', type: 'premium', cost: 2200, tiers: [3], desc: 'Primeira estrela Michelin da Islândia. Menu nórdico autoral. Reservar 60+ dias antes.' },
@@ -2113,7 +2111,7 @@ const COSTS = {
     fuel: { label: 'Combustível Islândia (~2300 km)', value: 3300, note: 'Compact Plus ~11–12 L/100km · ~265 L · diesel R$ 11–12/L' },
     camping: { label: 'Camping (13n) + hostel privativo RVK (1n)', value: 4370, note: '13×R$ 290 (camping) + 1×R$ 600 (hostel privativo última noite)' },
     food: { label: 'Comida (mercado + raros restaurantes)', value: 3800, note: 'Cozinhar 90%, alguns lanches/cafés. Bonus como base.' },
-    activities: { label: 'Atividades (whale watching econômico + Hofsós + entradas)', value: 1700, note: 'Whale watching combo museu (R$ 800), piscina Hofsós (R$ 90), Vestrahorn (R$ 110), Kerid (R$ 60), museus pequenos (R$ 130 cada)' },
+    activities: { label: 'Atividades (whale watching RIB + Hofsós + entradas)', value: 2600, note: 'Whale watching RIB Húsavík (R$ 1.700), piscina Hofsós (R$ 90), Vestrahorn (R$ 110), Kerid (R$ 60), museus pequenos (R$ 130 cada)' },
     misc: { label: 'Imprevistos / extras', value: 1800, note: 'Buffer 5% + presentes' },
   },
   2: {
@@ -2125,7 +2123,7 @@ const COSTS = {
     fuel: { label: 'Combustível Islândia (~2300 km)', value: 3300, note: 'Compact Plus ~11–12 L/100km · ~265 L · diesel R$ 11–12/L' },
     camping: { label: 'Camping (11n) + 2 hotéis rurais + 1 hotel boutique RVK', value: 6390, note: '11×290 (camping) + 2×1100 (hotel rural: Klaustur + Borgarnes) + 1×1000 (hotel boutique RVK)' },
     food: { label: 'Comida (70/30 cozinha vs restaurante)', value: 5800, note: 'Mercado base + 1–2 restaurantes/semana + lagosta em Höfn + jantar em RVK' },
-    activities: { label: 'Atividades (Silfra + whale + 2 banhos + caverna lava)', value: 5650, note: 'Silfra snorkel (R$ 1.700), whale Húsavík (R$ 1.100), Mývatn Nature Baths (R$ 580), Sky Lagoon (R$ 980), caverna Víðgelmir (R$ 1.300), Forest Lagoon (R$ 580)' },
+    activities: { label: 'Atividades (Silfra + whale RIB + 2 banhos + caverna lava)', value: 6250, note: 'Silfra snorkel (R$ 1.700), whale RIB Húsavík (R$ 1.700), Mývatn Nature Baths (R$ 580), Sky Lagoon (R$ 980), caverna Víðgelmir (R$ 1.300), Forest Lagoon (R$ 580)' },
     misc: { label: 'Imprevistos / extras', value: 2500, note: 'Buffer 5% + presentes + 1 noite extra "se der ruim"' },
   },
   3: {
