@@ -2068,9 +2068,9 @@ const DAYS = [
   },
   {
     n: 15, date: '10/10', wd: 'Sáb', title: 'Devolução do motorhome · Reykjavík a pé',
-    from: 'Reykjavík', to: 'Reykjavík (hotel)', region: 'rvk', km: 30,
+    from: 'Reykjavík', to: 'Reykjavík (Thingholt)', region: 'rvk', km: 30,
     aurora: 2,
-    narrative: 'Manhã: devolução do motorhome na McRent às 09:30 (tanque cheio, água descartada, limpeza básica — chegue com folga). A partir daí o dia é TODO a pé na capital: deixa a bagagem no hotel e explora Reykjavík caminhando. Hallgrímskirkja (torre + vista) e Sun Voyager, o centro pela Laugavegur + Harpa, o inusitado Museu Fálico, compras (lopapeysa, chocolate Omnom, vodka Reyka) e café na Sandholt. Jantar especial — vocês merecem. Pernoite no hotel pra encarar o voo cedo amanhã (11/10, 09:15). Os banhos já ficaram pra trás (Sky no Dia 14, Blue na chegada) — hoje é cidade pura.',
+    narrative: 'Manhã: devolução do motorhome na McRent às 09:30 (tanque cheio, água descartada, limpeza básica — chegue com folga). A partir daí o dia é TODO a pé na capital: deixa a bagagem no hotel (Thingholt by Center Hotels, no centro) e explora Reykjavík caminhando. Hallgrímskirkja (torre + vista) e Sun Voyager, o centro pela Laugavegur + Harpa, o inusitado Museu Fálico, compras (lopapeysa, chocolate Omnom, vodka Reyka) e café na Sandholt. Jantar especial — vocês merecem. Pernoite no hotel pra encarar o voo cedo amanhã (11/10, 09:15). Os banhos já ficaram pra trás (Sky no Dia 14, Blue na chegada) — hoje é cidade pura.',
     activities: [
       { id: 'a15_1', name: 'Devolução do motorhome na McRent · 09:30', type: 'transport', cost: 0, tiers: [1,2,3], desc: 'Devolução agendada para 09:30, no mesmo depósito da retirada (Reykjavík/Kópavogur). Tanque cheio, água suja descartada, limpeza básica. Combine transfer/táxi até o hotel no centro. Reserve folga — a vistoria pode demorar.', forced: true },
       { id: 'a15_4', name: 'Hallgrímskirkja (torre) + Sun Voyager', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Comece pela igreja-cartão: suba na torre (~R$ 65/pessoa) pra vista panorâmica da cidade. Depois, a pé até o Sun Voyager, a escultura de aço à beira-mar. As duas imagens-cartão de Reykjavík.' },
@@ -2079,15 +2079,13 @@ const DAYS = [
       { id: 'a15_3', name: 'Laugavegur (compras) + Sandholt (café)', type: 'paid', cost: 800, tiers: [1,2,3], desc: 'Suéter lopapeysa (Handknitting Association), chocolate Omnom, vodka Reyka, bottlebrush de musgo. Sandholt é a melhor padaria.' },
       { id: 'a15_5', name: 'Jantar tasting · Dill (Michelin)', type: 'premium', cost: 2200, tiers: [3], desc: 'Primeira estrela Michelin da Islândia. Menu nórdico autoral. Reservar 60+ dias antes.' },
       { id: 'a15_6', name: 'Jantar médio · Matur og Drykkur ou Messinn', type: 'paid', cost: 900, tiers: [2], desc: 'Matur og Drykkur: receitas islandesas tradicionais reinterpretadas. Messinn: peixe fresco direto do porto. Ambos não exigem reserva tão antecipada.' },
-      { id: 'a15_7', name: 'Hotel premium em Reykjavík', type: 'lodging', cost: 1400, tiers: [3], desc: 'Sand Hotel, Konsulat ou ION City — última noite com cama de verdade depois de 13 noites em motorhome.' },
-      { id: 'a15_8', name: 'Hotel boutique em RVK', type: 'lodging', cost: 1000, tiers: [2], desc: 'Center Hotels Plaza, 22 Hill ou Hotel Reykjavík Centrum. Bom localizado.' },
-      { id: 'a15_9', name: 'Hostel Reykjavík (Tier 1)', type: 'lodging', cost: 600, tiers: [1], desc: 'Kex Hostel ou Loft Hostel — quartos privativos. Bem situados, ambiente bom.' },
+      { id: 'a15_7', name: 'Thingholt by Center Hotels (reservado)', type: 'lodging', cost: 1400, tiers: [1,2,3], desc: 'Hotel boutique 4★ no centro (Þingholtsstræti 3–5, 101 Reykjavík) — JÁ RESERVADO por vocês. Última noite com cama de verdade depois de 13 noites de motorhome. Deixem a bagagem aqui logo após devolver o motorhome e explorem a cidade a pé.', forced: true },
     ],
-    side: { lodging: 'Hotel em Reykjavík · a definir', meal: 'Restaurante', auroraNote: 'Difícil na cidade · sem motorhome hoje, mas se KP 5+ e céu limpo dá pra um táxi/tour a Þingvellir' }
+    side: { lodging: 'Thingholt by Center Hotels', meal: 'Restaurante', auroraNote: 'Difícil na cidade · sem motorhome hoje, mas se KP 5+ e céu limpo dá pra um táxi/tour a Þingvellir' }
   },
   {
     n: 16, date: '11/10', wd: 'Dom', title: 'Voo de volta via Montreal · GRU 12/10',
-    from: 'Reykjavík (hotel)', to: 'Keflavík → Montreal → São Paulo', region: 'transit', km: 50,
+    from: 'Reykjavík (Thingholt)', to: 'Keflavík → Montreal → São Paulo', region: 'transit', km: 50,
     aurora: 0,
     narrative: 'Acorda cedo: o voo sai de Keflavík às 09:15, então check-out e transfer pra KEF nas primeiras horas (saída do hotel ~05:30–06:00, ~50 km / 45 min). Trecho 1 — KEF 09:15 → Montreal (YUL). Layover longo, de 12h15, em Montreal: dá pra sair do aeroporto e ver o Vieux-Montréal se a imigração canadense liberar (atenção ao eTA/visto). Trecho 2 — YUL 22:55 → GRU, pouso em São Paulo no dia 12/10 às 09:50, bem no feriado de Nossa Senhora Aparecida. Em casa pra desmontar a mala e voltar à rotina sem violência.',
     activities: [
@@ -2110,7 +2108,7 @@ const COSTS = {
     ]},
     vehicle: { label: 'Motorhome McRent · Compact Plus (13 noites)', value: 24500, note: 'Modelo reservado: McRent Compact Plus · retirada 27/09 12h, devolução 10/10 09:30', editable: true },
     fuel: { label: 'Combustível Islândia (~2300 km)', value: 3300, note: 'Compact Plus ~11–12 L/100km · ~265 L · diesel R$ 11–12/L' },
-    camping: { label: 'Camping (13n) + hostel privativo RVK (1n)', value: 4370, note: '13×R$ 290 (camping) + 1×R$ 600 (hostel privativo última noite)' },
+    camping: { label: 'Camping (13n) + Thingholt RVK (1n)', value: 5170, note: '13×R$ 290 (camping) + 1× Thingholt by Center Hotels (última noite · reservado)' },
     food: { label: 'Comida (mercado + raros restaurantes)', value: 3800, note: 'Cozinhar 90%, alguns lanches/cafés. Bonus como base.' },
     activities: { label: 'Atividades (whale watching RIB + Hofsós + entradas)', value: 2600, note: 'Whale watching RIB Húsavík (R$ 1.700), piscina Hofsós (R$ 90), Vestrahorn (R$ 110), Kerid (R$ 60), museus pequenos (R$ 130 cada)' },
     misc: { label: 'Imprevistos / extras', value: 1800, note: 'Buffer 5% + presentes' },
@@ -2122,7 +2120,7 @@ const COSTS = {
     ]},
     vehicle: { label: 'Motorhome McRent · Compact Plus (13 noites)', value: 24500, note: 'Modelo reservado: McRent Compact Plus · retirada 27/09 12h, devolução 10/10 09:30', editable: true },
     fuel: { label: 'Combustível Islândia (~2300 km)', value: 3300, note: 'Compact Plus ~11–12 L/100km · ~265 L · diesel R$ 11–12/L' },
-    camping: { label: 'Camping (11n) + 2 hotéis rurais + 1 hotel boutique RVK', value: 6390, note: '11×290 (camping) + 2×1100 (hotel rural: Klaustur + Borgarnes) + 1×1000 (hotel boutique RVK)' },
+    camping: { label: 'Camping (11n) + 2 hotéis rurais + Thingholt RVK', value: 6790, note: '11×290 (camping) + 2×1100 (hotel rural: Klaustur + Borgarnes) + 1× Thingholt by Center Hotels (reservado)' },
     food: { label: 'Comida (70/30 cozinha vs restaurante)', value: 5800, note: 'Mercado base + 1–2 restaurantes/semana + lagosta em Höfn + jantar em RVK' },
     activities: { label: 'Atividades (Silfra + whale RIB + 2 banhos + caverna lava)', value: 6250, note: 'Silfra snorkel (R$ 1.700), whale RIB Húsavík (R$ 1.700), Mývatn Nature Baths (R$ 580), Sky Lagoon (R$ 980), caverna Víðgelmir (R$ 1.300), Forest Lagoon (R$ 580)' },
     misc: { label: 'Imprevistos / extras', value: 2500, note: 'Buffer 5% + presentes + 1 noite extra "se der ruim"' },
@@ -2134,7 +2132,7 @@ const COSTS = {
     ]},
     vehicle: { label: 'Motorhome McRent · Compact Plus (13 noites)', value: 24500, note: 'Modelo reservado: McRent Compact Plus · retirada 27/09 12h, devolução 10/10 09:30', editable: true },
     fuel: { label: 'Combustível Islândia (~2300 km)', value: 3300, note: 'Compact Plus ~11–12 L/100km · ~265 L · diesel R$ 11–12/L' },
-    camping: { label: 'Camping (9n) + 4 hotéis/guesthouse + 1 hotel premium RVK', value: 9210, note: '9×290 (camping) + 4×1400 (Klaustur + Borgarnes + Grundarfjörður + Hellnar/Búðir) + 1×1400 (Sand Hotel ou ION City RVK)' },
+    camping: { label: 'Camping (9n) + 4 hotéis/guesthouse + Thingholt RVK', value: 9210, note: '9×290 (camping) + 4×1400 (Klaustur + Borgarnes + Grundarfjörður + Hellnar/Búðir) + 1× Thingholt by Center Hotels (reservado)' },
     food: { label: 'Comida (50/50 cozinha vs restaurante + tasting)', value: 7800, note: 'Inclui jantar Dill (Michelin) em Reykjavík + lagosta premium Höfn + restaurantes em Snæfellsnes' },
     activities: { label: 'Atividades premium completas', value: 8900, note: 'Silfra dive duplo (R$ 3.500), glacier hike Skaftafell (R$ 2.200), whale RIB (R$ 1.700), banhos (Sky + Mývatn + Forest + Blue), caverna Víðgelmir' },
     misc: { label: 'Imprevistos / extras', value: 4000, note: 'Buffer generoso + lopapeysa premium + presentes' },
