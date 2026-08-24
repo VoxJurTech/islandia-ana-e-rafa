@@ -1700,6 +1700,7 @@ main {
     <button class="tab" data-tab="aurora">✦ Aurora Boreal</button>
     <button class="tab" data-tab="logistics">⚙ Logística</button>
     <button class="tab" data-tab="checklist">✓ Pré-viagem</button>
+    <button class="tab" data-tab="scenarios">⚖ Cenários</button>
     <a class="tab tab-link" href="agendamentos.html">📋 Agendamentos <span class="ext">↗</span></a>
   </div>
 </nav>
@@ -1830,6 +1831,7 @@ main {
 <section class="section" id="aurora"></section>
 <section class="section" id="logistics"></section>
 <section class="section" id="checklist"></section>
+<section class="section" id="scenarios"></section>
 
 </main>
 
@@ -3109,6 +3111,161 @@ function renderChecklist() {
   `;
 }
 
+// ============ CENÁRIOS ============
+const SCENARIO = {
+  diyBase: 5780, // Sky 980 + Mývatn 580 + Forest 580 + Silfra snorkel 1700 + Whale RIB 1700 + Museu 240
+  extras: [
+    { key: 'blue', label: 'Blue Lagoon', cost: 1100, on: true },
+    { key: 'glacier', label: 'Glacier hike (Skaftafell)', cost: 2200, on: true },
+    { key: 'cave', label: 'Caverna Víðgelmir', cost: 1300, on: true },
+    { key: 'flyover', label: 'FlyOver Iceland', cost: 500, on: false },
+  ],
+  harpaActivities: 6680, // Sky 1290 + FlyOver 500 + Silfra 2200 + Whale(tradicional) 1190 + Mývatn 1500
+  harpaFee: 12000,
+  hybridFee: 4000,       // ponto médio "a negociar" (reservas difíceis + assistência motorhome)
+  baseComum: 55970,      // voos 13k + motorhome 24,5k + combustível 3,3k + camping 3,77k + comida 6k + estac. 1,5k + Thingholt 1,4k + seguro/eSIM/misc 2,5k
+};
+
+function diyPasseios() {
+  return SCENARIO.diyBase + SCENARIO.extras.filter(e => e.on).reduce((s, e) => s + e.cost, 0);
+}
+
+function toggleScenarioExtra(key) {
+  const e = SCENARIO.extras.find(x => x.key === key);
+  if (e) e.on = !e.on;
+  renderScenarios();
+}
+
+function renderScenarios() {
+  const wrap = document.getElementById('scenarios');
+  const diyP = diyPasseios();
+  const diyVar = diyP;
+  const harpaVar = SCENARIO.harpaActivities + SCENARIO.harpaFee;
+  const hybridVar = diyP + SCENARIO.hybridFee;
+  const delta = harpaVar - diyVar;
+  const f = formatBRL;
+
+  const chips = SCENARIO.extras.map(e =>
+    `<button class="filter-chip ${e.on ? 'active' : ''}" onclick="toggleScenarioExtra('${e.key}')">${e.on ? '✓ ' : '+ '}${e.label} · ${f(e.cost)}</button>`
+  ).join('');
+
+  wrap.innerHTML = `
+    <div class="section-header">
+      <div class="section-eyebrow">07 · Cenários</div>
+      <h2>Reservar <em>com a HÁRPÁ</em> ou por conta?</h2>
+      <p class="section-lead">Os voos, o motorhome, a comida e o camping custam o mesmo dos três jeitos — então a decisão real é só sobre <strong>passeios + quem gerencia/reserva</strong>. Abaixo, os três cenários lado a lado (valores para <strong>2 pessoas</strong>). Ligue/desligue os passeios caros pra ver seu número mudar ao vivo.</p>
+    </div>
+
+    <div class="filters" style="align-items: center;">
+      <div class="filter-group" style="flex:1;">
+        <span class="filter-label">Passeios caros no seu plano (DIY / Híbrido)</span>
+        <div class="filter-options">${chips}</div>
+      </div>
+      <div class="live-total" style="text-align:right;">
+        Seus passeios (DIY)
+        <strong style="color: var(--aurora-green);">${f(diyP)}</strong>
+      </div>
+    </div>
+
+    <div class="tier-grid">
+      <!-- DIY -->
+      <div class="tier-card" data-tier-card="diy">
+        <div class="tier-card-glow" style="background: var(--aurora-cyan);"></div>
+        <div class="tier-card-eyebrow"><span>Cenário A</span><span style="color: var(--aurora-cyan)">●</span></div>
+        <h3><em>Por conta</em></h3>
+        <p class="tier-tagline">Vocês reservam tudo (já estão 90% prontos)</p>
+        <div class="tier-budget mono">${f(diyVar)}</div>
+        <div class="tier-budget-sub"><span>passeios + concierge</span><span>taxa R$ 0</span></div>
+        <ul class="tier-features">
+          <li>Reservam pelos links da aba <strong>Agendamentos</strong></li>
+          <li>Roteiro completo (norte/leste, Stuðlagil, Mývatn 2n…)</li>
+          <li>Escolhem cada passeio (toggles acima)</li>
+          <li class="no">Sem concierge / socorro dedicado no motorhome</li>
+          <li class="no">Vocês monitoram aurora e reservas</li>
+        </ul>
+      </div>
+
+      <!-- HÍBRIDO -->
+      <div class="tier-card featured" data-tier-card="hybrid">
+        <div class="tier-card-glow" style="background: var(--aurora-green);"></div>
+        <div class="tier-card-eyebrow"><span style="color: var(--aurora-green)">★ Equilíbrio</span><span style="color: var(--aurora-green)">●</span></div>
+        <h3><em>Híbrido</em></h3>
+        <p class="tier-tagline">Faz por conta, paga só o que dá tranquilidade</p>
+        <div class="tier-budget mono">${f(hybridVar)}</div>
+        <div class="tier-budget-sub"><span>passeios + taxa reduzida</span><span>~${f(SCENARIO.hybridFee)} a negociar</span></div>
+        <ul class="tier-features">
+          <li>Roteiro de vocês, mais completo</li>
+          <li>Vocês reservam o fácil (lagoas, museus, Parka)</li>
+          <li><strong>Contratam só o de alto valor:</strong> reservas difíceis (Friðheimar, restaurantes) + <strong>assistência ao motorhome</strong></li>
+          <li>Ou: negociar taxa menor com o Arthur (já têm motorhome+hotel+voo)</li>
+          <li>Resolve o maior medo (quebra) sem os R$ 12k cheios</li>
+        </ul>
+      </div>
+
+      <!-- HÁRPÁ -->
+      <div class="tier-card" data-tier-card="harpa">
+        <div class="tier-card-glow" style="background: var(--gold);"></div>
+        <div class="tier-card-eyebrow"><span style="color: var(--gold)">Cenário C · full service</span><span style="color: var(--gold)">●</span></div>
+        <h3><em>HÁRPÁ</em></h3>
+        <p class="tier-tagline">Concierge 24/7, zero stress</p>
+        <div class="tier-budget mono">${f(harpaVar)}</div>
+        <div class="tier-budget-sub"><span>passeios + concierge</span><span>taxa ${f(SCENARIO.harpaFee)}</span></div>
+        <ul class="tier-features">
+          <li>Eles reservam tudo + itinerário diário</li>
+          <li>Monitoramento de aurora + avisam vocês</li>
+          <li><strong>Socorro no motorhome</strong> (o ponto mais forte)</li>
+          <li class="no">Set de passeios mais enxuto (sem glacier hike/Víðgelmir/Blue)</li>
+          <li class="no">Baleia é barco tradicional, não o RIB</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout aurora" style="margin-bottom: 28px;">
+      <div class="callout-title">◈ O que essa comparação isola</div>
+      <p>A HÁRPÁ sai <strong>${f(delta)} mais cara que o "por conta"</strong> — e com <strong>menos passeios</strong>. Essa diferença é, na prática, <strong>o preço do concierge</strong> (${f(SCENARIO.harpaFee)}). Não é preço fora da realidade: é serviço premium honesto. A pergunta é só se vale ~${f(SCENARIO.harpaFee/2)}/pessoa pela mão-na-roda + o salva-vidas no motorhome — sabendo que <strong>tudo ali dentro vocês conseguem reservar sozinhos</strong> (aba Agendamentos).</p>
+    </div>
+
+    <h3 style="font-size: 22px; margin: 32px 0 16px; font-family: var(--serif); font-style: italic;">📊 Lado a lado · bloco variável (2 pax)</h3>
+    <div class="cost-grid" style="grid-template-columns: 2fr 1fr 1fr 1fr;">
+      <div class="cost-cell head">Item</div>
+      <div class="cost-cell head" style="color: var(--aurora-cyan);">A · Por conta</div>
+      <div class="cost-cell head" style="color: var(--aurora-green);">B · Híbrido</div>
+      <div class="cost-cell head" style="color: var(--gold);">C · HÁRPÁ</div>
+
+      <div class="cost-cell category">Passeios <div class="muted" style="font-size:11px;">seu set (toggles) vs. set enxuto da HÁRPÁ</div></div>
+      <div class="cost-cell value">${f(diyP)}</div>
+      <div class="cost-cell value">${f(diyP)}</div>
+      <div class="cost-cell value">${f(SCENARIO.harpaActivities)}</div>
+
+      <div class="cost-cell category">Taxa concierge <div class="muted" style="font-size:11px;">gestão + reservas + assistência</div></div>
+      <div class="cost-cell value zero">—</div>
+      <div class="cost-cell value">~${f(SCENARIO.hybridFee)}</div>
+      <div class="cost-cell value">${f(SCENARIO.harpaFee)}</div>
+
+      <div class="cost-cell category subtotal" style="grid-column:1;">TOTAL variável · 2 pax</div>
+      <div class="cost-cell value subtotal">${f(diyVar)}</div>
+      <div class="cost-cell value subtotal">${f(hybridVar)}</div>
+      <div class="cost-cell value subtotal">${f(harpaVar)}</div>
+    </div>
+
+    <div class="callout" style="margin-top: 24px;">
+      <div class="callout-title">➕ Base comum (igual nos 3 cenários) · ~${f(SCENARIO.baseComum)}</div>
+      <p>Voos (~R$ 13k) + motorhome já pago (R$ 24,5k) + combustível (~R$ 3,3k) + camping (~R$ 3,8k) + comida (~R$ 6k) + estacionamento (~R$ 1,5k) + hotel Thingholt já pago (R$ 1,4k) + seguro/eSIM/pedágio/imprevistos (~R$ 2,5k). <strong>Somando a base comum, a viagem fica em ~${f(SCENARIO.baseComum + diyVar)} (por conta), ~${f(SCENARIO.baseComum + hybridVar)} (híbrido) ou ~${f(SCENARIO.baseComum + harpaVar)} (HÁRPÁ).</strong> Ajuste fino de passeios continua na aba <a href="#" onclick="showSection('costs');return false;" style="color:var(--aurora-cyan);">Custos</a>.</p>
+    </div>
+
+    <div class="callout warn" style="margin-top: 24px;">
+      <div class="callout-title">❓ Faltam 4 respostas do Arthur pra fechar os números</div>
+      <ul style="margin:0; padding-left: 18px; color: var(--text-secondary); font-size: 14px; line-height: 1.7;">
+        <li>Whale watching: barco tradicional ou <strong>RIB</strong>? (o orçamento tá no tradicional)</li>
+        <li>Mývatn R$ 1.500 inclui o <strong>GeoSea</strong> junto? (sozinho tá ~2,5× o mercado)</li>
+        <li>Entra <strong>glacier hike</strong>? (não está no pacote dele)</li>
+        <li>A <strong>taxa de R$ 12k é fixa</strong> ou escala/dá desconto por já termos motorhome+hotel+voo?</li>
+      </ul>
+      <p style="margin-top:10px; font-size:13px;">Assim que ele responder, eu atualizo os números aqui. Comida e hotel já estão fora do pacote dele — comida entra na base comum, hotel (Thingholt) vocês já fecharam.</p>
+    </div>
+  `;
+}
+
 // ============ TIER & TAB SWITCHING ============
 function setTier(t) {
   state.tier = t;
@@ -3147,6 +3304,7 @@ function showSection(id) {
   if (id === 'aurora') renderAurora();
   if (id === 'logistics') renderLogistics();
   if (id === 'checklist') renderChecklist();
+  if (id === 'scenarios') renderScenarios();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
