@@ -1561,6 +1561,7 @@ main {
 }
 .poi-flag svg { width: 13px; height: 13px; display: block; flex-shrink: 0; }
 .poi-flag.drone-ok { color: var(--aurora-green); background: rgba(74,222,128,0.10); border-color: rgba(74,222,128,0.35); }
+.poi-flag.drone-check { color: var(--gold); background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.40); }
 .poi-flag.drone-no { color: #fca5a5; background: rgba(248,113,113,0.10); border-color: rgba(239,68,68,0.45); }
 .poi-flag.reserve-flag { color: var(--gold); background: rgba(251,191,36,0.10); border-color: rgba(251,191,36,0.40); }
 
@@ -1891,8 +1892,8 @@ const DAYS = [
       { id: 'a3_1', name: 'Þingvellir National Park', type: 'free', drone: 'no', cost: 50, tiers: [1,2,3], desc: 'UNESCO. Caminhada entre as placas tectônicas, antiga sede do Alþingi (parlamento viking de 930 d.C.). Estacionamento ~R$ 50.', forced: true },
       { id: 'a3_2', name: 'Snorkel em Silfra', type: 'paid', cost: 1700, tiers: [1,2,3], desc: 'Sem certificação exigida. Drysuit fornecido. ~30 min na água a 2°C entre as placas tectônicas. Operadoras: DIVE.IS, Dive Silfra.' },
       { id: 'a3_3', name: 'Mergulho em Silfra (em vez do snorkel)', type: 'premium', cost: 3500, tiers: [1,2,3], desc: 'Drysuit. ~40 min na água. Visibilidade de 100m+. Exige PADI Advanced Open Water OU experiência drysuit. Reservar com antecedência.' },
-      { id: 'a3_4', name: 'Geysir & Strokkur', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Strokkur entra em erupção a cada 6–10 min. Geysir original adormecido.' },
-      { id: 'a3_5', name: 'Gullfoss', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Uma das cachoeiras mais imponentes da Europa. Dois níveis com vista 360°.' },
+      { id: 'a3_4', name: 'Geysir & Strokkur', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Strokkur entra em erupção a cada 6–10 min. Geysir original adormecido.' },
+      { id: 'a3_5', name: 'Gullfoss', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Uma das cachoeiras mais imponentes da Europa. Dois níveis com vista 360°.' },
       { id: 'a3_6', name: 'Cratera Kerid', type: 'paid', cost: 60, tiers: [1,2,3], desc: 'Pequena cratera vulcânica com lago turquesa. ~R$ 30/pessoa.' },
       { id: 'a3_7', name: 'Camping Hvolsvöllur', type: 'lodging', cost: 290, tiers: [1,2,3], desc: 'Camping bem localizado pra arrancar pra costa sul.' },
     ],
@@ -1905,9 +1906,9 @@ const DAYS = [
     narrative: 'Dia das cachoeiras da costa sul — agora com pernoite mais a leste, em Kirkjubæjarklaustur, pra encurtar e destravar o Dia 5. Manhã/tarde: Seljalandsfoss (a que se anda por trás), Gljúfrabúi (escondida ao lado, não pule!), Skógafoss, Dyrhólaey e Reynisfjara (praia preta — cuidado com as ondas) no fim da tarde. Seguindo pra leste, passe por Eldhraun (campo de lava de musgo) e feche o dia no cânion Fjaðrárgljúfur, antes de dormir em Klaustur — a ~1h de Skaftafell, prontos pra glacier hike das 9h.',
     activities: [
       { id: 'a4_1', name: 'Seljalandsfoss + Gljúfrabúi', type: 'paid', cost: 80, tiers: [1,2,3], desc: 'Estacionamento ~R$ 40/veículo. Capa de chuva obrigatória. Gljúfrabúi (escondida na rocha) é o segredo melhor guardado.', forced: true },
-      { id: 'a4_2', name: 'Skógafoss', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Suba a escadaria lateral pra vista de cima. Trilha continua subindo o rio Skógá (vale 1h).' },
+      { id: 'a4_2', name: 'Skógafoss', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Suba a escadaria lateral pra vista de cima. Trilha continua subindo o rio Skógá (vale 1h).' },
       { id: 'a4_8', name: 'Sólheimasandur · destroços do avião DC-3', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, drone: 'ok', desc: 'Fuselagem de um DC-3 da marinha americana que caiu em 1973, numa praia de areia preta surreal — entre Skógafoss e Vík. Atenção: ~3,8 km de caminhada plana de cada lado (~1h por trecho) OU shuttle pago (~R$ 70/pessoa). Sem sombra nem banheiro. Cenário de foto/drone incrível, mas come 2–3h do dia.' },
-      { id: 'a4_4', name: 'Dyrhólaey (mirante & farol)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Arco rochoso e vista panorâmica da costa sul.' },
+      { id: 'a4_4', name: 'Dyrhólaey (mirante & farol)', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Arco rochoso e vista panorâmica da costa sul. (Reserva natural — drone proibido; e fecha a fauna na época de nidificação.)' },
       { id: 'a4_5', name: 'Reynisfjara (areia preta)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'CUIDADO com sneaker waves — ondas traiçoeiras matam turistas todo ano. Mantenha 30m do mar. Visita no fim da tarde, antes de seguir pra Klaustur.' },
       { id: 'a4_9', name: 'Eldhraun (campo de lava de musgo)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Campo de lava da erupção de Laki (1783) coberto de musgo verde, a caminho de Klaustur. Proibido pisar fora das trilhas. Parada rápida de estrada.' },
       { id: 'a4_10', name: 'Fjaðrárgljúfur Canyon', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Cânion sinuoso de 100m de profundidade, pertinho de Kirkjubæjarklaustur. Trilha curta de mirantes, 30–40 min. Fecha o Dia 4 (ou faça de manhã cedo no Dia 5, se chegar tarde).' },
@@ -1928,7 +1929,7 @@ const DAYS = [
       { id: 'a5_5', name: 'Jökulsárlón (mirante gratuito)', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Lagoa glacial com icebergs à deriva; foquinhas boiam entre eles. A vista da margem é espetacular e gratuita — este é o jeito de curtir Jökulsárlón (decidimos não fazer o passeio de barco).' },
       { id: 'a5_7', name: 'Diamond Beach (luz dourada)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Praia de areia preta cravejada de icebergs cristalinos, em frente a Jökulsárlón. Chegue no fim da tarde pra pegar a luz dourada (pôr do sol ~18h50 no início de out).', forced: true },
       { id: 'a5_9', name: 'Jantar de lagosta em Höfn', type: 'paid', cost: 700, tiers: [2,3], desc: 'Pakkhús ou Humarhöfnin. Lagosta islandesa (humar) é menor e mais doce que a americana. Höfn fica no caminho, antes de Vestrahorn.' },
-      { id: 'a5_8', name: 'Vestrahorn / Stokksnes (aurora foreground)', type: 'paid', drone: 'ok', cost: 110, tiers: [1,2,3], desc: 'Montanha de pico afiado refletindo numa praia preta. Acesso via Viking Café em Stokksnes (R$ 110/veículo). Ao anoitecer vira um dos melhores primeiros planos de aurora do país — vá após o jantar em Höfn.' },
+      { id: 'a5_8', name: 'Vestrahorn / Stokksnes (aurora foreground)', type: 'paid', drone: 'check', cost: 110, tiers: [1,2,3], desc: 'Montanha de pico afiado refletindo numa praia preta. Acesso via Viking Café em Stokksnes (R$ 110/veículo). Ao anoitecer vira um dos melhores primeiros planos de aurora do país — vá após o jantar em Höfn.' },
       { id: 'a5_10', name: 'Camping Djúpivogur', type: 'lodging', reserve: true, cost: 290, tiers: [1,2,3], desc: 'Camping pequeno mas charmoso, com piscina geotérmica do vilarejo ao lado.' },
     ],
     side: { lodging: 'Camping Djúpivogur', meal: 'Lagosta + cozinhar', auroraNote: 'Bom · Vestrahorn/Stokksnes como foreground · lua minguante começando' }
@@ -1983,7 +1984,7 @@ const DAYS = [
     aurora: 4,
     narrative: 'Manhã na Goðafoss ("cachoeira dos deuses" — onde, segundo a saga, ídolos pagãos foram jogados quando a Islândia se converteu ao cristianismo em 1000 d.C.). Almoço em Akureyri (segunda maior cidade) com tempo de jardim botânico e catedral. Tarde transferência pra Húsavík, capital mundial da observação de baleias.',
     activities: [
-      { id: 'a9_1', name: 'Goðafoss', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'Cachoeira em ferradura. Acesso pelos dois lados (oeste e leste). Combine os dois pra fotos completas.', forced: true },
+      { id: 'a9_1', name: 'Goðafoss', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Cachoeira em ferradura. Acesso pelos dois lados (oeste e leste). Combine os dois pra fotos completas. (Monumento natural protegido — drone restrito; confirme a placa.)', forced: true },
       { id: 'a9_2', name: 'Jardim Botânico Akureyri + Catedral', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Jardim botânico surpreendente pra latitude. Catedral modernista com vitrais ingleses do séc. XIX (vieram da Catedral de Coventry).' },
       { id: 'a9_3', name: 'Forest Lagoon (Akureyri)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Banho geotermal recente, dentro de uma floresta. Mais íntimo e moderno. Abre 10h–24h. ⏰ Reserve o slot ~16h00: depois de Goðafoss + Akureyri, e antes de ~1h de estrada até Húsavík (baleias são cedo no Dia 10).' },
       { id: 'a9_4', name: 'Whale Museum (Húsavík)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Esqueletos reais montados, super didático. Vale a hora.' },
@@ -2025,10 +2026,10 @@ const DAYS = [
     aurora: 5,
     narrative: 'Dia leve, focado em fotografia. Kirkjufell é a montanha mais fotografada da Islândia (apareceu em Game of Thrones como "Arrowhead Mountain"). Tarde tranquila em Grundarfjörður, vila pesqueira na base da montanha — pernoite curto de propósito para maximizar a noite: Kirkjufellsfoss como primeiro plano + Kirkjufell ao fundo + aurora dançando = a foto.',
     activities: [
-      { id: 'a12_1', name: 'Kirkjufell + Kirkjufellsfoss (chegada e exploração)', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'Montanha em forma de chapéu pontudo + cachoeira no primeiro plano. Cenário icônico. Reconheça a locação no daylight pra voltar à noite preparado.', forced: true },
+      { id: 'a12_1', name: 'Kirkjufell + Kirkjufellsfoss (chegada e exploração)', type: 'free', drone: 'check', cost: 0, tiers: [1,2,3], desc: 'Montanha em forma de chapéu pontudo + cachoeira no primeiro plano. Cenário icônico. Reconheça a locação no daylight pra voltar à noite preparado.', forced: true },
       { id: 'a12_2', name: 'Praia Djúpalónssandur', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Praia preta com pedras vulcânicas redondas. As "pedras de força" tradicionais ainda estão lá pra teste.' },
       { id: 'a12_3', name: 'Saxhóll Crater (mirante)', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Pequena cratera com escadaria de metal. 15 min de subida, vista 360° da península.' },
-      { id: 'a12_4', name: 'Aurora chase noturna em Kirkjufell', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'A foto-clichê pelos motivos certos: monte pontudo + cachoeira em primeiro plano + aurora dançando = imagem-cartão. Pico de chance hoje (lua quase nova). Vá entre 21h e 01h.', forced: true },
+      { id: 'a12_4', name: 'Aurora chase noturna em Kirkjufell', type: 'free', drone: 'check', cost: 0, tiers: [1,2,3], desc: 'A foto-clichê pelos motivos certos: monte pontudo + cachoeira em primeiro plano + aurora dançando = imagem-cartão. Pico de chance hoje (lua quase nova). Vá entre 21h e 01h.', forced: true },
       { id: 'a12_7', name: 'Road cênica de Kolgrafafjörður (Rota 54)', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Fiorde atravessado por uma ponte/aterro na costa norte da Snæfellsnes, logo antes de Grundarfjörður. Não é uma "parada" e sim um trecho de direção lindo — montanhas refletidas na água parada, e às vezes baleias e muitas aves no fiorde (ficou famoso por isso). Você passa por ele a caminho de Kirkjufell, então não estava listado como item separado.' },
       { id: 'a12_5', name: 'Camping Grundarfjörður', type: 'lodging', reserve: true,cost: 290, tiers: [1,2], desc: 'Camping municipal pequeno na base do Kirkjufell. Aberto até início de outubro.' },
       { id: 'a12_6', name: 'Hotel Kirkjufell ou similar', type: 'lodging', cost: 1100, tiers: [3], desc: 'Hotel Framnes, Hotel Kirkjufell ou Grundarfjörður Guesthouse. Vista direta da montanha.' },
@@ -2393,10 +2394,15 @@ function renderItinerary() {
         <p class="section-lead">Clique em qualquer dia pra expandir. Marque ou desmarque atividades — o total se ajusta. As atividades em <strong>cinza claro</strong> são opcionais (você pode adicionar). As <strong>obrigatórias</strong> estão travadas (transporte, entradas obrigatórias). Os dias com ✦ aurora-prime coincidem com lua minguante/nova — concentre energia neles. Use a <strong>busca</strong> pra descobrir em que dia você passa por um lugar.</p>
       </div>
       <div class="itin-legend">
-        <span class="leg">${droneBadge('ok')} permitido (com certeza)</span>
-        <span class="leg">${droneBadge('no')} proibido (parque nacional)</span>
+        <span class="leg">${droneBadge('ok')} permitido (fora de área protegida)</span>
+        <span class="leg">${droneBadge('check')} confirmar no local</span>
+        <span class="leg">${droneBadge('no')} proibido (parque/área protegida)</span>
         <span class="leg">${reserveBadge(true)} camping a reservar/confirmar antes</span>
         <span class="leg"><span class="opcional-pill">opcional</span> extra fora do roteiro-base</span>
+      </div>
+      <div class="callout warn" style="margin-bottom: 24px;">
+        <div class="callout-title">⚠ Regras de drone (Islândia · 2026) — leia antes de subir</div>
+        <p><strong>Registro obrigatório:</strong> registre-se como operador EASA (vale 5 anos, ID no drone) — vale até pro DJI Flip (~249 g). <strong>Proibido em parques nacionais e em 25+ áreas protegidas</strong> (desde 17/05/2026): Þingvellir, Gullfoss, Geysir, Skógafoss, Dyrhólaey, Snæfellsjökull, Skaftafell, Jökulsárlón, entre outras. <strong>Multa até ISK 500 mil (~R$ 18 mil) + apreensão.</strong> Mesmo nos pontos marcados "ok", confira a placa no local, voe longe de gente e da fauna, e nunca sobre multidões. Os ícones abaixo são um guia — a placa oficial no local sempre manda.</p>
       </div>
       <div class="filters">
         <div class="filter-group">
@@ -2608,8 +2614,9 @@ const DRONE_SVG_NO = `<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round
 const CAL_SVG = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg>`;
 
 function droneBadge(d) {
-  if (d === 'ok') return `<span class="poi-flag drone-ok" title="Drone permitido — siga as regras gerais da Islândia (voo até 120 m, longe de pessoas e fauna).">${DRONE_SVG_OK}drone ok</span>`;
-  if (d === 'no') return `<span class="poi-flag drone-no" title="Drone PROIBIDO sem licença — área de parque nacional / restrição oficial.">${DRONE_SVG_NO}drone proibido</span>`;
+  if (d === 'ok') return `<span class="poi-flag drone-ok" title="Fora de área protegida — voo permitido COM registro EASA. Ainda assim, confira a placa no local e voe longe de pessoas.">${DRONE_SVG_OK}drone ok*</span>`;
+  if (d === 'no') return `<span class="poi-flag drone-no" title="Drone PROIBIDO — parque nacional ou uma das 25+ áreas protegidas onde a Islândia recusa autorização (desde 17/05/2026). Multa até ISK 500 mil + apreensão.">${DRONE_SVG_NO}drone proibido</span>`;
+  if (d === 'check') return `<span class="poi-flag drone-check" title="Zona cinzenta — não é parque nacional, mas é terreno privado/muito movimentado. Confirme a placa/autorização no local antes de subir.">${DRONE_SVG_OK}confira no local</span>`;
   return '';
 }
 function reserveBadge(r) {
