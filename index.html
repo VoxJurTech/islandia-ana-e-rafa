@@ -1873,9 +1873,9 @@ const DAYS = [
     n: 2, date: '27/09', wd: 'Dom', title: 'Chegada · compras + Blue Lagoon',
     from: 'Keflavík (KEF) · 08h', to: 'Selfoss', region: 'rvk', km: 160,
     aurora: 2,
-    narrative: 'Chegada tranquila, sem correria. Pouso em Keflavík ~08h; como a retirada do motorhome na McRent é só às 12h, a manhã é pra respirar do voo — café, organizar as malas, descansar. Depois das 12h, as DUAS prioridades do dia: (1) a compra grande no Bonus — com motorhome, estocar comida é a base de tudo, então reserve tempo pra isso sem pressa; e (2) a Blue Lagoon (coladinha em Keflavík) pra dissolver o jet lag num banho no campo de lava. Se ainda sobrar energia, os miradouros de Reykjanes (Bridge Between Continents, Gunnuhver, farol) ficam no caminho — mas são 100% opcionais, sem culpa nenhuma de pular. Pernoite em Selfoss, pertinho do Golden Circle de amanhã.',
+    narrative: 'Chegada tranquila, sem correria. Pouso em Keflavík ~08h; o depósito da McRent fica a apenas ~4 km do aeroporto (Smiðjuvellir 5a, Reykjanesbær), então a manhã é de espera — café, organizar as malas, descansar. ⚡ VALE UM E-MAIL: peça pra antecipar a retirada das 12h para as 10h (primeiro horário permitido) e vocês ganham 2h de luz no Dia 1. Depois das 12h, as DUAS prioridades do dia: (1) a compra grande no Bonus — com motorhome, estocar comida é a base de tudo, então reserve tempo pra isso sem pressa; e (2) a Blue Lagoon (coladinha em Keflavík) pra dissolver o jet lag num banho no campo de lava. Se ainda sobrar energia, os miradouros de Reykjanes (Bridge Between Continents, Gunnuhver, farol) ficam no caminho — mas são 100% opcionais, sem culpa nenhuma de pular. Pernoite em Selfoss, pertinho do Golden Circle de amanhã.',
     activities: [
-      { id: 'a2_1', name: 'Retirada do motorhome na McRent · 12h', type: 'transport', cost: 0, tiers: [1,2,3], desc: 'Chegada em KEF ~08h → transfer/shuttle até o depósito da McRent (região de Reykjavík/Kópavogur, ~45 min). Retirada agendada para 12h. Confira gás, água, eletricidade e equipamento, e fotografe a lataria (arranhões pré-existentes) antes de pegar a estrada.', forced: true },
+      { id: 'a2_1', name: 'Retirada do motorhome na McRent · 12h (Keflavík)', type: 'transport', cost: 0, tiers: [1,2,3], desc: '📍 <strong>Smiðjuvellir 5a, 230 Reykjanesbær</strong> — a McRent tem UMA única estação na Islândia e ela fica a ~4 km do aeroporto (~8 min), NÃO em Reykjavík. Tel +354 578 6070 · iceland@mcrent.is. ⚠️ O transfer KEF→depósito é <strong>extra pago (€65 por trecho)</strong>, não é shuttle grátis — contrate junto com a locação ou vá de táxi (~3–4 mil ISK). Janela oficial de retirada: 10h–17h (dá pra antecipar pras 10h). Confira gás, água, eletricidade e equipamento, e fotografe a lataria antes de sair. Caução de €2.800 no cartão.', forced: true },
       { id: 'a2_2', name: 'Compra grande no Bonus (essencial · motorhome)', type: 'free', cost: 800, tiers: [1,2,3], desc: 'A PRIORIDADE do dia: com o motorhome, o abastecimento de comida é a base de tudo. Reserve ~1h sem pressa no Bonus (o mais barato, logo do porquinho rosa — há um grande em Reykjavík perto do depósito). Estoque pra vários dias: café, pão, manteiga, ovos, skyr, frios, massa, arroz, salmão/cordeiro, frutas, água, snacks de estrada, sacos de lixo. Vocês reabastecem depois em Akureyri e Borgarnes.', forced: true },
       { id: 'a2_7', name: 'Blue Lagoon (chegada · dissolver o jet lag)', type: 'premium', cost: 1100, tiers: [1,2,3], opcional: true, desc: 'A lagoa termal mais famosa do mundo — águas leitosas com sílica, máscara de algas, banho no meio do campo de lava. Fica ~20 min de KEF, na península de Reykjanes: encaixa perfeito no dia da chegada como a 1ª grande atração pra espantar o jet lag. ⏰ Reserve o slot ~14h (após a compra no Bonus + ~40 min de estrada). Abre 8h–22h. Reserve com 1+ mês de antecedência. O horário do ticket é só a CHEGADA — fica até quando quiser.' },
       { id: 'a2_3', name: 'Bridge Between Continents', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Ponte simbólica entre as placas tectônicas norte-americana e eurasiana, na Reykjanes. 10 min. Só se sobrar pique na chegada.' },
@@ -1932,7 +1932,7 @@ const DAYS = [
       { id: 'a5_7', name: 'Diamond Beach (luz dourada)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Praia de areia preta cravejada de icebergs cristalinos, em frente a Jökulsárlón. Chegue no fim da tarde pra pegar a luz dourada (pôr do sol ~18h50 no início de out).', forced: true },
       { id: 'a5_9', name: 'Jantar de lagosta em Höfn', type: 'paid', cost: 700, tiers: [2,3], desc: 'Pakkhús ou Humarhöfnin. Lagosta islandesa (humar) é menor e mais doce que a americana. Höfn fica no caminho, antes de Vestrahorn.' },
       { id: 'a5_8', name: 'Vestrahorn / Stokksnes (aurora foreground)', type: 'paid', drone: 'check', cost: 110, tiers: [1,2,3], desc: 'Montanha de pico afiado refletindo numa praia preta. Acesso via Viking Café em Stokksnes (R$ 110/veículo). Ao anoitecer vira um dos melhores primeiros planos de aurora do país — vá após o jantar em Höfn.' },
-      { id: 'a5_10', name: 'Camping Djúpivogur', type: 'lodging', reserve: true, cost: 290, tiers: [1,2,3], desc: 'Camping pequeno mas charmoso, com piscina geotérmica do vilarejo ao lado.' },
+      { id: 'a5_10', name: 'Camping Djúpivogur', type: 'lodging', cost: 290, tiers: [1,2,3], desc: '✅ VERIFICADO: <strong>aberto o ano todo</strong> ("Opið allt árið", tjalda.is 2026), operado pelo Hótel Framtíð. Tem despejo (losun/áfylling) para motorhome, eletricidade, lavanderia e cozinha + sala de estar aquecidas. Fica no centro da vila, com piscina, mercado e posto ao lado. Reserva ativa em parka.is/djupivogur. Plano B: Berunes (~35 km, aberto até 30/10).' },
     ],
     side: { lodging: 'Camping Djúpivogur', meal: 'Lagosta + cozinhar', auroraNote: 'Bom · Vestrahorn/Stokksnes como foreground · lua minguante começando' }
   },
@@ -1946,9 +1946,9 @@ const DAYS = [
       { id: 'a6_1', name: 'Petra\'s Stone Collection (Stöðvarfjörður)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Coleção privada de pedras da Petra Sveinsdóttir, virou museu. Curioso e barato.' },
       { id: 'a6_2', name: 'Estrada 95 sobre Fjarðarheiði', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Travessia de planalto até Seyðisfjörður. Vista panorâmica do fiorde descendo.' },
       { id: 'a6_3', name: 'Seyðisfjörður · igreja azul + rua arco-íris', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Vila instagramável, mas com substância: cena de arte ativa, café Skaftafell, casas coloridas.' },
-      { id: 'a6_4', name: 'Camping Seyðisfjörður', type: 'lodging', reserve: true,cost: 290, tiers: [1,2,3], desc: 'Camping pequeno e arrumado no centro da vila.' },
+      { id: 'a6_4', name: 'Camping Seyðisfjörður ⚠️ CONFIRMAR POR TELEFONE', type: 'lodging', reserve: true, cost: 290, tiers: [1,2,3], desc: '⚠️ <strong>ÚNICO CAMPING INCERTO DO ROTEIRO.</strong> O site do operador diz "1 abril–31 outubro", mas essa é a janela do CONTRATO DE ARRENDAMENTO com o município (Múlaþing) — os diretórios oficiais (east.is, ferdalag.is, CampEasy) dizem "1 maio–30 setembro". A favor: 6 relatos no park4night de gente que dormiu e PAGOU em outubro/2024 (02, 07, 09, 12, 23 e 26/10), e um de 10/11 já achou fechado — o corte real cai em 31/10. Contra: há obra no camping em ago/2026 e o site está sem manutenção. <strong>📞 LIGUE +354 792 0070</strong> (ou camping.seydisfjordur@gmail.com) até 20/09 E de novo entre 28–30/09. Plano B: Camp Egilsstaðir, 27 km, aberto o ano todo com prédio de serviços 24/7.' },
     ],
-    side: { lodging: 'Camping Seyðisfjörður', meal: 'Cozinhar', auroraNote: 'Excelente · fiorde escuro · lua minguante metade' }
+    side: { lodging: 'Seyðisfjörður ⚠️ ligar antes · plano B: Egilsstaðir', meal: 'Cozinhar', auroraNote: 'Excelente · fiorde escuro · lua minguante metade' }
   },
   {
     n: 7, date: '02/10', wd: 'Sex', title: 'Stuðlagil · rumo a Mývatn',
@@ -1960,9 +1960,9 @@ const DAYS = [
       { id: 'a7_2', name: 'Möðrudalur (vila mais alta da Islândia)', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Igrejinha de turfa, café Fjalladýrð. Boa parada pra esticar as pernas.' },
       { id: 'a7_3', name: 'Dettifoss', type: 'free', cost: 0, tiers: [1,2,3], desc: '100m de largura, 44m de queda. Estrada 862 (oeste) é asfaltada e mais segura que 864 (leste).' },
       { id: 'a7_5', name: 'Hengifoss + Litlanesfoss', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Uma das cachoeiras mais altas da Islândia (128 m), com paredão de faixas vermelhas de argila; no caminho passa por Litlanesfoss (colunas de basalto). Fica perto de Egilsstaðir, num desvio do trajeto pra Mývatn. Trilha de ~2,5 km de subida (ida), ~1h30–2h ida-volta — concorre em tempo com Stuðlagil no mesmo dia, por isso não entrou no base.' },
-      { id: 'a7_4', name: 'Camping Mývatn (Bjarg)', type: 'lodging', reserve: true,cost: 320, tiers: [1,2,3], desc: 'Camping na beira do lago, vista incrível, banheiros bons.' },
+      { id: 'a7_4', name: 'Camping Vogar · Mývatn (troca: Bjarg está fechado)', type: 'lodging', cost: 320, tiers: [1,2,3], desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> O Bjarg, que estava no roteiro, fecha em 01/09 (temporada 15/06–01/09, ficha oficial da Ferðamálastofa) — estaria fechado há um mês. Substituto: <strong>Vogar Travel Service</strong> (Vogar, 660 Mývatn), ~5 km de Reykjahlíð, <strong>aberto o ano todo</strong> (confirmado no site do operador e no Wayback de jan/2026, com preços ativos em pleno inverno). Tem cozinha e refeitório INTERNOS AQUECIDOS, chuveiro quente incluso, eletricidade, despejo, água potável, Wi-Fi e <strong>auto check-in 24h</strong> — ideal pra chegada noturna. ⚡ Dica: chegue com luz (~16h30) porque as tomadas acabam antes das vagas; leve extensão de 25 m com adaptador CEE azul.' },
     ],
-    side: { lodging: 'Camping Mývatn', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · Mývatn lua minguante · Hverir após anoitecer' }
+    side: { lodging: 'Camping Vogar · Mývatn', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · Mývatn lua minguante · Hverir após anoitecer' }
   },
   {
     n: 8, date: '03/10', wd: 'Sáb', title: 'Mývatn · dia inteiro',
@@ -1978,7 +1978,7 @@ const DAYS = [
       { id: 'a8_5', name: 'Earth Lagoon (Mývatn Nature Baths)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Lagoa termal a 36–40°C com vista da paisagem vulcânica. Mais barato e menos turístico que Blue Lagoon. Reaberto em jul/2026 como "Earth Lagoon" (abertura faseada — confirme o horário em earthlagoon.is). ⏰ Reserve o slot ~17h30: faça os vulcões de dia e relaxe ao anoitecer, já pertinho do camping/aurora. O horário do ticket é só a CHEGADA — você fica até fechar.' },
       { id: 'a8_6', name: 'Caverna Grjótagjá', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Caverna com fonte termal subterrânea (cena famosa de Game of Thrones). Banho proibido.' },
     ],
-    side: { lodging: 'Camping Mývatn (2ª noite)', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · 2ª chance · Hverir e Dimmuborgir como foreground' }
+    side: { lodging: 'Camping Vogar · Mývatn (2ª noite)', meal: 'Cozinhar', auroraNote: '✦ SPOT ESTRELA · 2ª chance · Hverir e Dimmuborgir como foreground' }
   },
   {
     n: 9, date: '04/10', wd: 'Dom', title: 'Goðafoss · Akureyri · Húsavík',
@@ -1990,9 +1990,9 @@ const DAYS = [
       { id: 'a9_2', name: 'Jardim Botânico Akureyri + Catedral', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Jardim botânico surpreendente pra latitude. Catedral modernista com vitrais ingleses do séc. XIX (vieram da Catedral de Coventry).' },
       { id: 'a9_3', name: 'Forest Lagoon (Akureyri)', type: 'paid', cost: 580, tiers: [2,3], desc: 'Banho geotermal recente, dentro de uma floresta. Mais íntimo e moderno. Abre 10h–24h. ⏰ Reserve o slot ~16h00: depois de Goðafoss + Akureyri, e antes de ~1h de estrada até Húsavík (baleias são cedo no Dia 10).' },
       { id: 'a9_4', name: 'Whale Museum (Húsavík)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Esqueletos reais montados, super didático. Vale a hora.' },
-      { id: 'a9_5', name: 'Camping Húsavík', type: 'lodging', reserve: true,cost: 290, tiers: [1,2,3], desc: 'Camping pequeno mas central.' },
+      { id: 'a9_5', name: 'Camping Mánárbakki 66.12°N (troca: Húsavík está fechado)', type: 'lodging', reserve: true, cost: 290, tiers: [1,2,3], desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> O camping de Húsavík fecha em 30/09 (temporada 15/05–30/09, Visit North Iceland com preços 2026) — vocês chegariam 4 dias depois. Substituto: <strong>Mánárbakki / Camping 66.12° North</strong>, Tjörnes, a apenas <strong>24 km (~22 min)</strong> de Húsavík pela Rota 85 asfaltada. Temporada <strong>1/mar–31/out</strong> confirmada em 4 fontes. Tem despejo (losun), eletricidade, chuveiro, lavadora e <strong>cozinha e refeitório internos aquecidos</strong>. É fazenda familiar sem recepção 24h e não está no Parka: <strong>📧 mande e-mail antes (manarbakki@gmail.com · +354 898-0424)</strong>. Mantém a geografia do dia (baleias, GeoSea, Tjörnes).' },
     ],
-    side: { lodging: 'Camping Húsavík', meal: 'Cozinhar/Restaurante', auroraNote: 'Bom · vá pro porto · lua minguante magra' }
+    side: { lodging: 'Mánárbakki 66.12°N (24 km)', meal: 'Cozinhar/Restaurante', auroraNote: 'Bom · Tjörnes é escuro e voltado ao mar · lua minguante magra' }
   },
   {
     n: 10, date: '05/10', wd: 'Seg', title: 'Húsavík · baleias + Hofsós',
@@ -2004,9 +2004,9 @@ const DAYS = [
       { id: 'a10_4', name: 'Hvítserkur (parada de estrada)', type: 'free', drone: 'ok', cost: 0, tiers: [1,2,3], desc: 'Pilar de pedra de 15m emergindo do mar — troll petrificado pelo sol da manhã, segundo a lenda. 20 min de parada.' },
       { id: 'a10_5', name: 'Síldarminjasafnið (Museu do Arenque, Siglufjörður)', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Vencedor do European Museum of the Year. História da era do arenque. Surpreendentemente bom.' },
       { id: 'a10_6', name: 'Piscina geotermal de Hofsós', type: 'paid', cost: 90, tiers: [1,2,3], desc: 'Piscina de borda infinita debruçada sobre o fiorde. Uma das mais bonitas da Islândia. Boa pra noite — entra na água com lua minguante e fica de olho na aurora.', forced: true },
-      { id: 'a10_7', name: 'Camping Hofsós', type: 'lodging', reserve: true,cost: 290, tiers: [1,2,3], desc: 'Camping simples ao lado da piscina.' },
+      { id: 'a10_7', name: 'Camping Blönduós (troca: Hofsós está fechado)', type: 'lodging', reserve: true, cost: 290, tiers: [1,2,3], desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> O camping de Hofsós fecha em 01/10 no melhor cenário (o operador declara 01/05–01/10; o Visit North Iceland diz 13/05–12/09). A <strong>piscina de Hofsós continua no roteiro</strong> — só não dá pra dormir lá. Substituto: <strong>Blönduós</strong>, na Rota 1, <strong>aberto o ano todo</strong> (parka.is + CampEasy 2026), com despejo, eletricidade, chuveiro e água quente — e ainda <strong>adianta ~120 km</strong> rumo ao Oeste. 📞 Ligue +354 837-1300 (não tem reserva online ativa). Alternativa se quiserem ficar no norte: Siglufjörður (aberto até 15/10, com Parka ativo), mas fica 45 km pra trás. ❌ NÃO use Varmahlíð: três fontes, três datas diferentes.' },
     ],
-    side: { lodging: 'Camping Hofsós', meal: 'Cozinhar', auroraNote: '✦ TOP · região remotíssima · lua quase invisível' }
+    side: { lodging: 'Camping Blönduós (Rota 1)', meal: 'Cozinhar', auroraNote: '✦ TOP · região remotíssima · lua quase invisível' }
   },
   {
     n: 11, date: '06/10', wd: 'Ter', title: 'Caverna de lava · Borgarnes',
@@ -2017,10 +2017,10 @@ const DAYS = [
       { id: 'a11_1', name: 'Caverna de lava Víðgelmir', type: 'paid', cost: 1300, tiers: [2,3], desc: 'Tour guiado de 1h30 dentro da maior caverna de lava acessível da Islândia. Capacete e lanterna fornecidos. Operadora: The Cave. Reserve com 1 semana de antecedência.' },
       { id: 'a11_2', name: 'Hraunfossar & Barnafoss', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Cachoeiras gêmeas: Hraunfossar emerge diretamente da lava, Barnafoss é uma cascata frenética em fenda estreita. 30 min total.', forced: true },
       { id: 'a11_6', name: 'Fosslaug · fonte termal natural (Reykjafoss)', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Pequena poça termal natural de pedra ao lado da cachoeira Reykjafoss, perto de Varmahlíð (Skagafjörður), no caminho de Hofsós pra Borgarnes. Gratuita e rústica, sem estrutura (troca de roupa no carro) e uma curta caminhada do estacionamento. Soak tranquilo fora das multidões — leve sapato de água. Ficou de fora por ser um desvio "de banho", não um ponto turístico.' },
-      { id: 'a11_4', name: 'Camping Borgarnes', type: 'lodging', cost: 290, tiers: [1,2], desc: 'Camping urbano. Borgarnes tem bom mercado pra reabastecer antes da Snæfellsnes.' },
+      { id: 'a11_4', name: 'Camping Fossatún (troca: Borgarnes está fechado)', type: 'lodging', cost: 290, tiers: [1,2], desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> O camping de Borgarnes fecha em meados de setembro (site oficial: "Open mid-May – mid-September"; a CampEasy já marca out/nov de 2026 como "Closed"). Substituto: <strong>Fossatún</strong>, na Rota 50 a <strong>18 km</strong> de Borgarnes (~20 min, asfalto), que <strong>fecha só em dezembro e janeiro</strong> e tem tarifa de inverno declarada (1/set–30/abr, 4.000 ISK). Tem despejo, eletricidade (setores A/B com CEE) e self check-in. ⚠️ O check-in do camping encerra às 20h e o restaurante só abre pra jantar sob reserva — <strong>reserve e pague online antes</strong> (fossatun.is) e peça por e-mail o número da vaga + instruções de self check-in.' },
       { id: 'a11_5', name: 'Hotel rural em Borgarnes', type: 'lodging', cost: 1100, tiers: [3], desc: 'Hótel Hamar ou Icelandair Hotel Hamar — comum entre passeios de motorhome quando o usuário quer cama de verdade na metade da viagem.' },
     ],
-    side: { lodging: 'Camping/Hotel Borgarnes', meal: 'Restaurante', auroraNote: 'Bom · saia 20 min pra norte se quiser escuro · lua bem magra' }
+    side: { lodging: 'Camping Fossatún (18 km de Borgarnes)', meal: 'Restaurante', auroraNote: 'Bom · Fossatún é rural e escuro · lua bem magra' }
   },
   {
     n: 12, date: '07/10', wd: 'Qua', title: 'Snæfellsnes · Kirkjufell',
@@ -2033,14 +2033,14 @@ const DAYS = [
       { id: 'a12_3', name: 'Saxhóll Crater (mirante)', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Pequena cratera com escadaria de metal. 15 min de subida, vista 360° da península.' },
       { id: 'a12_4', name: 'Aurora chase noturna em Kirkjufell', type: 'free', drone: 'check', cost: 0, tiers: [1,2,3], desc: 'A foto-clichê pelos motivos certos: monte pontudo + cachoeira em primeiro plano + aurora dançando = imagem-cartão. Pico de chance hoje (lua quase nova). Vá entre 21h e 01h.', forced: true },
       { id: 'a12_7', name: 'Road cênica de Kolgrafafjörður (Rota 54)', type: 'free', cost: 0, tiers: [1,2,3], opcional: true, desc: 'Fiorde atravessado por uma ponte/aterro na costa norte da Snæfellsnes, logo antes de Grundarfjörður. Não é uma "parada" e sim um trecho de direção lindo — montanhas refletidas na água parada, e às vezes baleias e muitas aves no fiorde (ficou famoso por isso). Você passa por ele a caminho de Kirkjufell, então não estava listado como item separado.' },
-      { id: 'a12_5', name: 'Camping Grundarfjörður', type: 'lodging', reserve: true,cost: 290, tiers: [1,2], desc: 'Camping municipal pequeno na base do Kirkjufell. Aberto até início de outubro.' },
+      { id: 'a12_5', name: 'Camping Grundarfjörður', type: 'lodging', cost: 290, tiers: [1,2,3], desc: '✅ VERIFICADO: <strong>aberto o ano todo</strong> (site do município com tarifas "2026": "open all year round with less service in Winter"). Eu tinha marcado errado como "fecha em outubro" — desculpa. Na base do Kirkjufell. ⚠️ A partir de 26/09 entra em MODO INVERNO: só <strong>banheiro + eletricidade</strong> (1.300 ISK), estacionamento no cascalho, sem pré-reserva pelo Parka, e chuveiro só na piscina municipal. É o <strong>único camping de Snæfellsnes aberto em outubro</strong> junto com Stykkishólmur. camping@grundarfjordur.is · +354 831 7242.' },
       { id: 'a12_6', name: 'Hotel Kirkjufell ou similar', type: 'lodging', cost: 1100, tiers: [3], desc: 'Hotel Framnes, Hotel Kirkjufell ou Grundarfjörður Guesthouse. Vista direta da montanha.' },
     ],
     side: { lodging: 'Camping/Hotel Grundarfjörður', meal: 'Cozinhar/Restaurante', auroraNote: '✦ SPOT ESTRELA · Kirkjufell foreground · lua quase nova' }
   },
   {
     n: 13, date: '08/10', wd: 'Qui', title: 'Snæfellsnes sul · Arnarstapi & Búðakirkja',
-    from: 'Grundarfjörður', to: 'Hellnar', region: 'west', km: 80,
+    from: 'Grundarfjörður', to: 'Grundarfjörður (2ª noite)', region: 'west', km: 130,
     aurora: 5,
     narrative: 'Volta à península pelo sul. Trilha costeira Arnarstapi → Hellnar (5 km com falésias de colunas de basalto, gruta de Gatklettur, ninhais de aves marinhas). Tarde: praia Djúpalónssandur (se não fez no dia anterior), Búðakirkja (igreja preta no campo de lava — foto épica). Pernoite em Hellnar, vila com 9 casas — escuridão absoluta.',
     activities: [
@@ -2049,32 +2049,34 @@ const DAYS = [
       { id: 'a13_3', name: 'Lóndrangar (basalto vertical no mar)', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: 'Dois pináculos vulcânicos de 75m emergindo da costa. Mirante a 5 min do estacionamento.' },
       { id: 'a13_4', name: 'Vatnshellir (caverna de lava menor)', type: 'paid', cost: 750, tiers: [3], desc: 'Tour guiado de 45 min dentro de tubo de lava. Mais curto que Víðgelmir, opção alternativa.' },
       { id: 'a13_5', name: 'Aurora chase em Búðakirkja', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Igreja preta + lua quase nova + KP alto = cenário absoluto. Vá entre 21h e 02h, café quente, paciência.', forced: true },
-      { id: 'a13_6', name: 'Camping Hellnar (Hellnar Country Hotel camping)', type: 'lodging', reserve: true,cost: 290, tiers: [1,2], desc: 'Vila com 9 casas. Camping pequeno, ao lado de um café histórico. Aberto até meados de outubro.' },
+      { id: 'a13_6', name: 'Volta a Grundarfjörður (2ª noite) — Hellnar NÃO tem camping', type: 'lodging', cost: 290, tiers: [1,2,3], desc: '🔄 <strong>CORREÇÃO IMPORTANTE: o "camping de Hellnar" não existe.</strong> Foi um erro meu — o município de Snæfellsbær opera só dois campings (Hellissandur e Ólafsvík) e nenhum diretório oficial tem ficha de Hellnar. A confusão vem de textos do parque que citam o setor "Arnarstapi‑Hellnar". Pior: <strong>Arnarstapi, Ólafsvík e Hellissandur fecham todos em 30/09</strong>. Em toda a península, em 08/10, só sobram <strong>Grundarfjörður</strong> e Stykkishólmur. Solução: faça o sul da península de dia (Arnarstapi, Búðakirkja, Lóndrangar) e <strong>volte a dormir em Grundarfjörður</strong> (~65 km, 1h) — sem desmontar acampamento e com o Kirkjufell de novo à disposição pra aurora. Alternativa: Stykkishólmur (~100 km).' },
       { id: 'a13_7', name: 'Hotel Búðir (lendário)', type: 'lodging', cost: 1600, tiers: [3], desc: 'Hotel boutique ao lado da Búðakirkja, vista pra geleira Snæfellsjökull. Romântico, restaurante premiado.' },
     ],
-    side: { lodging: 'Camping/Hotel Hellnar', meal: 'Cozinhar/Restaurante', auroraNote: '✦ SPOT ESTRELA · Búðakirkja foreground · lua quase nova' }
+    side: { lodging: 'Camping Grundarfjörður (2ª noite)', meal: 'Cozinhar/Restaurante', auroraNote: '✦ SPOT ESTRELA · Búðakirkja de dia; à noite, Kirkjufell de novo · lua quase nova' }
   },
   {
     n: 14, date: '09/10', wd: 'Sex', title: 'Snæfellsnes → Reykjavík · Sky Lagoon + Þingvellir aurora',
-    from: 'Hellnar', to: 'Reykjavík (via Þingvellir à noite)', region: 'rvk', km: 270,
+    from: 'Grundarfjörður', to: 'Þingvellir (aurora + pernoite)', region: 'rvk', km: 280,
     aurora: 5,
-    narrative: 'Manhã: estrada da Snæfellsnes pra Reykjavík (~2h30, parada em Borgarnes pra reabastecer/comer). Como vocês AINDA estão de motorhome e amanhã a cidade é toda a pé, hoje o foco é o que se faz "de carro". Chegando no início da tarde, o Perlan (estacionamento fácil pro motorhome): mirante 360° + a exposição "Wonders of Iceland" com caverna de gelo e o show de aurora no planetário Áróra 8K — ótimo "seguro" caso a aurora real não apareça. Depois, Sky Lagoon ao pôr do sol. À noite, a jogada final: Þingvellir pra aurora (45 min de carro), com a lua já quase invisível — se KP ≥ 3 e céu limpo, é a aurora "do tipo que faz chorar" (Almannagjá ou a margem do lago Þingvallavatn refletindo). ÚLTIMA noite no motorhome: durma no Reykjavík Campsite, pertinho do depósito da McRent pra devolução amanhã 09:30.',
+    narrative: 'Manhã: estrada da Snæfellsnes pra Reykjavík (~2h30, parada em Borgarnes pra reabastecer/comer). Como vocês AINDA estão de motorhome e amanhã a cidade é toda a pé, hoje o foco é o que se faz "de carro". Chegando no início da tarde, o Perlan (estacionamento fácil pro motorhome): mirante 360° + a exposição "Wonders of Iceland" com caverna de gelo e o show de aurora no planetário Áróra 8K — ótimo "seguro" caso a aurora real não apareça. Depois, Sky Lagoon ao pôr do sol. À noite, a jogada final: Þingvellir pra aurora (45 min de carro), com a lua já quase invisível — se KP ≥ 3 e céu limpo, é a aurora "do tipo que faz chorar" (Almannagjá ou a margem do lago Þingvallavatn refletindo). ÚLTIMA noite no motorhome: o ideal é dormir <strong>no próprio camping de Þingvellir (Nyrðri-Leirar, aberto o ano todo)</strong> — a Lua Nova é amanhã às 15:50, ou seja, esta é a noite mais escura da viagem, e vocês esperam a aurora dentro do motorhome. Amanhã a devolução é às 09:30 em Keflavík (~95 km daqui), então saiam cedo e abasteçam hoje.',
     activities: [
       { id: 'a14_1', name: 'Estrada Snæfellsnes → Reykjavík', type: 'transport', cost: 0, tiers: [1,2,3], desc: '~170 km, 2h30. Pare em Borgarnes pra abastecer/comer. Settlement Centre é boa parada cultural curta.' },
       { id: 'a14_7', name: 'Perlan · Wonders of Iceland + planetário Áróra', type: 'paid', cost: 380, tiers: [1,2,3], opcional: true, desc: 'Cúpula de vidro no alto de Reykjavík, com estacionamento fácil (dá pra ir de motorhome). Mirante 360°, caverna de gelo artificial, exposições vulcânicas e o show de aurora no planetário Áróra 8K (~20 min) — ótimo backup caso a aurora real não coopere. Abre 9h–21h (última entrada 90 min antes). ~R$ 190/pessoa · 2–3h.' },
       { id: 'a14_6', name: 'Sky Lagoon (ritual de 7 estágios) · de motorhome', type: 'premium', cost: 980, tiers: [2,3], desc: 'Banho geotermal de luxo na borda do oceano, em Kópavogur — tem estacionamento, dá pra ir de motorhome. Ritual sauna→vapor→duche frio→máscara→infusão. ~2–3h. Abre 9h–22h (até 20/10). ⏰ Reserve o slot ~16h00–16h30 pra pegar o pôr do sol (~18h10) de dentro da lagoa — o auge da experiência. O horário do ticket é só a CHEGADA; fica até quando quiser. Reserve com antecedência.' },
       { id: 'a14_4', name: 'Þingvellir noturno · caça à aurora final', type: 'free', drone: 'no', cost: 0, tiers: [1,2,3], desc: '45 min de RVK. Cenário-foto da viagem: lago Þingvallavatn + Almannagjá + aurora. Lua quase nova = condição absoluta. Vá entre 21h e 02h. Pode pegar pra ficar no motorhome esperando.', forced: true },
-      { id: 'a14_5', name: 'Camping Reykjavík (última noite no motorhome)', type: 'lodging', cost: 350, tiers: [1,2,3], desc: 'Reykjavík Campsite (Sundlaugavegur), central e aberto o ano todo, com boa estrutura. Última noite no motorhome — devolução na McRent amanhã (10/10) às 09:30.' },
+      { id: 'a14_5', name: 'Dormir EM Þingvellir · camping Nyrðri-Leirar ⭐', type: 'lodging', cost: 350, tiers: [1,2,3], desc: '⭐ <strong>RECOMENDADO.</strong> Descoberta que muda o dia: o camping <strong>Nyrðri-Leirar, dentro do Parque Nacional de Þingvellir, é aberto o ano todo</strong> (temporada de inverno 16/set–31/mai) e tem <strong>eletricidade</strong> para motorhome, banheiros e chuveiros — os outros três de Þingvellir fecham em 15/09. Preços 2026: 1.800 ISK/adulto + 1.100 eletricidade + 400 taxa. Vantagem enorme: <strong>a Lua Nova é 10/10 às 15:50, então esta é literalmente a noite mais escura da viagem</strong> (escuridão astronômica a partir das ~21h). Dormindo aqui vocês esperam a aurora DENTRO do motorhome e saem no instante em que ela acende — sem dirigir 45 min de volta às 2h da manhã. ⚠️ Custo: a manhã seguinte é longa (~95 km até a McRent) — saia ~07:15 no escuro, e abasteça na véspera.' },
+      { id: 'a14_8', name: 'Alternativa: Reykjavík Eco Campsite (mais confortável)', type: 'lodging', cost: 350, tiers: [1,2,3], opcional: true, desc: 'Plano B se a previsão de aurora estiver ruim em 09/10 — aí Þingvellir perde o sentido e o conforto urbano ganha. Aberto o ano todo, chuveiro quente, cozinha interna. ⚠️ Corrigindo o que eu tinha escrito: NÃO é "pertinho do depósito" — são ~50 km / 45 min até a McRent em Keflavík. <strong>Pré-reserve online</strong> (reykjavikcampsite.is): é a reserva que gera o PIN de 4 dígitos que abre o portão e a casa de serviço — sem ele, chegando depois das 22h vocês ficam na mão. Escolha a categoria "RV/Caravan Pitch - Area A (up to 8m)".' },
     ],
-    side: { lodging: 'Camping Reykjavík (motorhome)', meal: 'Restaurante', auroraNote: '✦✦ NOITE FINAL · Þingvellir · LUA QUASE NOVA · última chance grande' }
+    side: { lodging: 'Camping Þingvellir · Nyrðri-Leirar', meal: 'Restaurante', auroraNote: '✦✦ NOITE FINAL · dormindo DENTRO de Þingvellir · LUA NOVA em 10/10 — a noite mais escura da viagem' }
   },
   {
     n: 15, date: '10/10', wd: 'Sáb', title: 'Devolução do motorhome · Reykjavík a pé',
-    from: 'Reykjavík', to: 'Reykjavík (Thingholt)', region: 'rvk', km: 30,
+    from: 'Þingvellir → Keflavík', to: 'Reykjavík (Thingholt)', region: 'rvk', km: 145,
     aurora: 2,
-    narrative: 'Manhã: devolução do motorhome na McRent às 09:30 (tanque cheio, água descartada, limpeza básica — chegue com folga). A partir daí o dia é TODO a pé na capital: deixa a bagagem no hotel (Thingholt by Center Hotels, no centro) e explora Reykjavík caminhando. Hallgrímskirkja (torre + vista) e Sun Voyager, o centro pela Laugavegur + Harpa, o inusitado Museu Fálico, compras (lopapeysa, chocolate Omnom, vodka Reyka) e café na Sandholt. Jantar especial — vocês merecem. Pernoite no hotel pra encarar o voo cedo amanhã (11/10, 09:15). Os banhos já ficaram pra trás (Sky no Dia 14, Blue na chegada) — hoje é cidade pura.',
+    narrative: 'Manhã puxada: saia de Þingvellir ~07:15 (no escuro) e rode ~95 km até a McRent em KEFLAVÍK — a devolução às 09:30 é lá, não em Reykjavík. Vistoria, e então ~50 km de volta ao centro de Reykjavík de Flybus ou táxi. A partir daí o dia é TODO a pé na capital: deixa a bagagem no hotel (Thingholt by Center Hotels, no centro) e explora Reykjavík caminhando. Hallgrímskirkja (torre + vista) e Sun Voyager, o centro pela Laugavegur + Harpa, o inusitado Museu Fálico, compras (lopapeysa, chocolate Omnom, vodka Reyka) e café na Sandholt. Jantar especial — vocês merecem. Pernoite no hotel pra encarar o voo cedo amanhã (11/10, 09:15). Os banhos já ficaram pra trás (Sky no Dia 14, Blue na chegada) — hoje é cidade pura.',
     activities: [
-      { id: 'a15_1', name: 'Devolução do motorhome na McRent · 09:30', type: 'transport', cost: 0, tiers: [1,2,3], desc: 'Devolução agendada para 09:30, no mesmo depósito da retirada (Reykjavík/Kópavogur). Tanque cheio, água suja descartada, limpeza básica. Combine transfer/táxi até o hotel no centro. Reserve folga — a vistoria pode demorar.', forced: true },
+      { id: 'a15_1', name: 'Devolução do motorhome · 09:30 em Keflavík', type: 'transport', cost: 0, tiers: [1,2,3], desc: '📍 <strong>Smiðjuvellir 5a, Reykjanesbær (Keflavík)</strong> — mesma estação da retirada, e NÃO em Reykjavík como eu tinha escrito. De Þingvellir são ~95 km (1h20–1h30): <strong>saia ~07:15</strong> (o sol só nasce 08:02, então será no escuro). Abasteça na véspera — tanque cheio é obrigatório. Despeje as águas, limpeza básica, e conte 30–45 min de vistoria. A janela oficial de devolução vai até 14h: <strong>vale pedir por e-mail pra remarcar às 11h ou 12h</strong> e tirar toda a tensão da manhã.', forced: true },
+      { id: 'a15_13', name: 'Voltar de Keflavík a Reykjavík (hotel Thingholt)', type: 'transport', cost: 250, tiers: [1,2,3], desc: 'Depois da devolução vocês ficam em Reykjanesbær, com bagagem e sem carro — são ~50 km até o centro. Opções: <strong>Flybus/Airport Direct</strong> a partir do terminal do KEF (~R$ 220/pessoa, ~45 min), <strong>táxi</strong> (mais caro, ~22 mil ISK na tarifa fixa) ou o <strong>ônibus público Strætó 55</strong> (mais barato e mais lento). Combine antes — não deixe pra resolver na hora com as malas na calçada.', forced: true },
       { id: 'a15_4', name: 'Hallgrímskirkja (torre) + Sun Voyager', type: 'paid', cost: 130, tiers: [1,2,3], desc: 'Comece pela igreja-cartão: suba na torre (~R$ 65/pessoa) pra vista panorâmica da cidade. Depois, a pé até o Sun Voyager, a escultura de aço à beira-mar. As duas imagens-cartão de Reykjavík.' },
       { id: 'a15_11', name: 'Centro a pé · Laugavegur + Harpa + Tjörnin', type: 'free', cost: 0, tiers: [1,2,3], desc: 'Rua de pedestres principal (Laugavegur), a Harpa (sala de concerto com fachada de favo de vidro de colmeia) e o lago Tjörnin. Cafés bons no caminho: Reykjavík Roasters, Sandholt.' },
       { id: 'a15_12', name: 'Museu Fálico (Icelandic Phallological Museum)', type: 'paid', cost: 240, tiers: [1,2,3], opcional: true, desc: 'O famoso e inusitado museu do pênis — centenas de espécimes de mamíferos islandeses, com café e loja temática. No Hafnartorg (Reykjastræti 4), centro, super caminhável. Abre 10h–19h · ~R$ 120/pessoa. Rende as fotos e histórias mais improváveis da viagem.' },
@@ -2401,6 +2403,11 @@ function renderItinerary() {
         <span class="leg"><span class="opcional-pill">opcional</span> extra fora do roteiro-base</span>
       </div>
       <div class="callout warn" style="margin-bottom: 24px;">
+        <div class="callout-title">🏕 Campings verificados um a um (ago/2026) — 4 trocas obrigatórias</div>
+        <p>Conferimos os 12 campings em fontes oficiais. <strong>Cinco estariam fechados</strong> na data de vocês e já foram substituídos no roteiro: <strong>Mývatn/Bjarg → Vogar</strong> (2 noites!), <strong>Húsavík → Mánárbakki</strong>, <strong>Hofsós → Blönduós</strong>, <strong>Borgarnes → Fossatún</strong>, e o <strong>"camping de Hellnar", que simplesmente não existe → 2ª noite em Grundarfjörður</strong>. Seyðisfjörður (01/10) é o único <strong>incerto</strong> — precisa de um telefonema. Ficam confirmados abertos: Selfoss, Hvolsvöllur, Klaustur, Djúpivogur e Grundarfjörður (os dois últimos abertos o ano todo). <strong>Só duas ligações ficaram pendentes: Mánárbakki (+354 898-0424) e Blönduós (+354 837-1300)</strong>, que não têm reserva online.</p>
+      </div>
+
+      <div class="callout warn" style="margin-bottom: 24px;">
         <div class="callout-title">⚠ Regras de drone (Islândia · 2026) — leia antes de subir</div>
         <p><strong>Registro obrigatório:</strong> registre-se como operador EASA (vale 5 anos, ID no drone) — vale até pro DJI Flip (~249 g). <strong>Proibido em parques nacionais e em 25+ áreas protegidas</strong> (desde 17/05/2026): Þingvellir, Gullfoss, Geysir, Skógafoss, Dyrhólaey, Snæfellsjökull, Skaftafell, Jökulsárlón, entre outras. <strong>Multa até ISK 500 mil (~R$ 18 mil) + apreensão.</strong> Mesmo nos pontos marcados "ok", confira a placa no local, voe longe de gente e da fauna, e nunca sobre multidões. Os ícones abaixo são um guia — a placa oficial no local sempre manda.</p>
       </div>
@@ -2456,7 +2463,11 @@ function renderItinerary() {
 
 // ============ BUSCA NO ROTEIRO ============
 function normalizeStr(s) {
-  return (s || '').toString().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  // Também transcreve caracteres islandeses para ASCII, pra achar "thingvellir",
+  // "jokulsarlon", "seydisfjordur" e afins digitados sem os caracteres especiais.
+  return (s || '').toString().toLowerCase()
+    .replace(/þ/g, 'th').replace(/ð/g, 'd').replace(/æ/g, 'ae').replace(/ø/g, 'o')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '');
 }
 
 function searchItinerary() {
@@ -2739,7 +2750,7 @@ function renderCosts() {
         <div class="muted" style="font-size: 12px;">${c.vehicle.note}</div>
         <div style="margin-top: 8px;">
           <a href="https://www.motorhome-trips.com.br" target="_blank" rel="noopener" class="flight-cot-btn">⌕ Motorhome Trips</a>
-          <a href="https://www.mcrent.com" target="_blank" rel="noopener" class="flight-cot-btn">⌕ McRent</a>
+          <a href="https://www.mcrent.de/wohnmobilvermietung/island/keflavik/" target="_blank" rel="noopener" class="flight-cot-btn">⌕ McRent Keflavík</a>
           <a href="https://happycampers.is" target="_blank" rel="noopener" class="flight-cot-btn">⌕ Happy Campers</a>
           <a href="https://www.indiecampers.com" target="_blank" rel="noopener" class="flight-cot-btn">⌕ Indie Campers</a>
         </div>
@@ -3316,14 +3327,14 @@ const DAY_COORDS = {
   4: { lat: 63.7910, lng: -18.0490, label: 'Kirkjubæjarklaustur', country: 'islandia' },
   5: { lat: 64.6577, lng: -14.2784, label: 'Djúpivogur', country: 'islandia' },
   6: { lat: 65.2625, lng: -14.0083, label: 'Seyðisfjörður', country: 'islandia' },
-  7: { lat: 65.6390, lng: -16.9180, label: 'Mývatn (1ª)', country: 'islandia' },
-  8: { lat: 65.6390, lng: -16.9180, label: 'Mývatn (2ª)', country: 'islandia' },
-  9: { lat: 66.0444, lng: -17.3380, label: 'Húsavík', country: 'islandia' },
-  10: { lat: 65.8961, lng: -19.4189, label: 'Hofsós', country: 'islandia' },
-  11: { lat: 64.5380, lng: -21.9224, label: 'Borgarnes', country: 'islandia' },
-  12: { lat: 64.9250, lng: -23.2530, label: 'Grundarfjörður', country: 'islandia' },
-  13: { lat: 64.7621, lng: -23.6536, label: 'Hellnar', country: 'islandia' },
-  14: { lat: 64.1466, lng: -21.9426, label: 'Reykjavík (motorhome)', country: 'islandia' },
+  7: { lat: 65.6239, lng: -16.9191, label: 'Vogar · Mývatn (1ª)', country: 'islandia' },
+  8: { lat: 65.6239, lng: -16.9191, label: 'Vogar · Mývatn (2ª)', country: 'islandia' },
+  9: { lat: 66.1930, lng: -17.1550, label: 'Mánárbakki (Tjörnes)', country: 'islandia' },
+  10: { lat: 65.6600, lng: -20.2870, label: 'Blönduós', country: 'islandia' },
+  11: { lat: 64.5933, lng: -21.5767, label: 'Fossatún', country: 'islandia' },
+  12: { lat: 64.9250, lng: -23.2530, label: 'Grundarfjörður (1ª)', country: 'islandia' },
+  13: { lat: 64.9250, lng: -23.2530, label: 'Grundarfjörður (2ª)', country: 'islandia' },
+  14: { lat: 64.2570, lng: -21.1250, label: 'Þingvellir · Nyrðri-Leirar', country: 'islandia' },
   15: { lat: 64.1466, lng: -21.9426, label: 'Reykjavík (hotel)', country: 'islandia' },
 };
 
@@ -3345,7 +3356,7 @@ const POI = [
   { lat: 64.4023, lng: -14.5614, name: 'Hvalnes Beach (opcional)', type: 'beach', desc: 'Praia preta com farol amarelo · manhã do Dia 6, ao sul de Djúpivogur (D6)' },
   { lat: 63.8804, lng: -22.4495, name: 'Blue Lagoon', type: 'lagoon', desc: 'A lagoa termal mais famosa do mundo · perto de Keflavík · na chegada (D2)' },
   { lat: 63.9850, lng: -22.6056, name: '✈ Aeroporto Keflavík (KEF)', type: 'airport', desc: 'Chegada 27/09 ~08h · embarque de volta 11/10 09:15 (via Montreal)' },
-  { lat: 64.0976, lng: -21.8639, name: '🚐 McRent · retirada/devolução', type: 'depot', desc: 'Retirada do motorhome 27/09 12h · devolução 10/10 09:30 (região de Reykjavík/Kópavogur)' },
+  { lat: 64.0028, lng: -22.5620, name: '🚐 McRent · retirada/devolução', type: 'depot', desc: 'Smiðjuvellir 5a, Reykjanesbær (KEFLAVÍK) · única estação da McRent na Islândia, ~4 km do aeroporto · retirada 27/09 12h, devolução 10/10 09:30' },
   { lat: 63.4912, lng: -19.3636, name: 'Sólheimasandur (opcional)', type: 'beach', desc: 'Destroços do DC-3 · ~3,8 km de caminhada · entre Skógafoss e Vík (D4)' },
   { lat: 65.0783, lng: -14.8869, name: 'Hengifoss (opcional)', type: 'falls', desc: '128 m + Litlanesfoss · perto de Egilsstaðir (D7)' },
   { lat: 65.7160, lng: -16.7560, name: 'Krafla · Víti (opcional)', type: 'volcano', desc: 'Cratera + Leirhnjúkur · ~15 min ao N de Mývatn (D8)' },

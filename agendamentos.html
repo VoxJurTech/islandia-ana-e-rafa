@@ -226,8 +226,8 @@ footer { max-width: 1080px; margin: 0 auto; padding: 0 24px 80px; }
   </div>
 
   <div class="callout warn">
-    <div class="callout-title">⚠ Leia antes · sobre campings na Islândia</div>
-    <p>Ao contrário dos passeios, <strong>a maioria dos campings islandeses NÃO aceita reserva online</strong> — você paga na chegada (cartão) ou pelo <strong>app Parka</strong>, e raramente há como "garantir vaga" antes. O que dá pra fazer com antecedência é: (1) confirmar que o camping <strong>estará aberto em outubro</strong> via <a href="https://www.park4night.com" target="_blank" rel="noopener">Park4Night</a>; (2) baixar o <a href="https://parka.is" target="_blank" rel="noopener">app Parka</a> pra pagar; (3) avaliar o <a href="https://www.campingcard.is" target="_blank" rel="noopener">Camping Card</a>. A exceção do roteiro é o <strong>Reykjavík Eco Campsite</strong> (esse pede pré-reserva no site). Por isso os campings aparecem aqui como "pagar na chegada / Parka", e não com botão de reserva — exceto onde realmente existe.</p>
+    <div class="callout-title">🏕 Campings verificados um a um (ago/2026) — 5 trocas obrigatórias</div>
+    <p>Conferimos os 12 campings em fontes oficiais e <strong>cinco estariam FECHADOS</strong> nas datas de vocês — já foram substituídos: <strong>Mývatn/Bjarg → Vogar</strong> (2 noites), <strong>Húsavík → Mánárbakki</strong>, <strong>Hofsós → Blönduós</strong>, <strong>Borgarnes → Fossatún</strong>, e o <strong>"camping de Hellnar", que não existe → 2ª noite em Grundarfjörður</strong>. Sobre reservas: a maioria dos campings islandeses <strong>não aceita reserva online</strong> — paga-se na chegada ou pelo <a href="https://parka.is" target="_blank" rel="noopener">app Parka</a>. As exceções com reserva real são Fossatún, Reykjavík Eco e Djúpivogur. <strong>Duas ligações são obrigatórias: Mánárbakki (+354 898-0424) e Blönduós (+354 837-1300)</strong>, mais a confirmação do incerto Seyðisfjörður (+354 792 0070). O <a href="https://www.campingcard.is" target="_blank" rel="noopener">Camping Card</a> não vale a pena: sua validade termina em meados de setembro.</p>
   </div>
 
   <div class="callout">
@@ -302,37 +302,41 @@ const TOURS = [
 ];
 
 const CAMPS = [
-  { id: 'c_rvk', day: 'Dia 14 · 09/10', name: 'Reykjavík Eco Campsite (última noite no motorhome)', cost: 'ref. R$ 350/noite',
-    desc: '<strong>Única exceção:</strong> esse pede pré-reserva no site (e dá o código de acesso). Central, aberto o ano todo. Você dorme aqui antes de devolver o motorhome em 10/10.',
-    pills: ['online'], url: 'https://www.reykjavikcampsite.is', op: 'reykjavikcampsite.is' },
+  { id: 'c_rvk', day: 'Dia 14 · 09/10 (alternativa)', name: 'Reykjavík Eco Campsite — plano B da última noite', cost: 'ref. R$ 350/noite', opt: true,
+    desc: '<span class="op">Alternativa ao Þingvellir</span>, se a previsão de aurora estiver ruim em 09/10 — aí ganha pelo conforto (chuveiro quente, cozinha interna). Aberto o ano todo. <strong>Pré-reserve online:</strong> é a reserva que gera o <strong>PIN de 4 dígitos</strong> que abre o portão e a casa de serviço; sem ele, chegando após as 22h vocês ficam na mão. Categoria: "RV/Caravan Pitch - Area A (up to 8m)". ⚠️ Fica a ~50 km da McRent em Keflavík, não "pertinho".',
+    pills: ['online','lead'], url: 'https://reykjavikcampsite.is/book-now/', op: 'reykjavikcampsite.is' },
 
-  { id: 'c_djupivogur', day: 'Dia 5 · 30/09', name: 'Camping Djúpivogur', cost: 'ref. R$ 290/noite',
-    desc: 'Pequeno e charmoso, com piscina geotérmica ao lado. Confirme abertura em outubro no Park4Night; pague na chegada / Parka.',
-    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_djupivogur', day: 'Dia 5 · 30/09', name: 'Camping Djúpivogur ✅ aberto o ano todo', cost: 'ref. R$ 290/noite',
+    desc: '✅ <strong>VERIFICADO: aberto o ano todo</strong> (tjalda.is 2026), operado pelo Hótel Framtíð. Despejo, eletricidade, lavanderia e cozinha/sala aquecidas, no centro da vila. Tem reserva ativa no Parka. Plano B: Berunes (~35 km).',
+    pills: ['online'], url: 'https://parka.is/djupivogur/', op: 'parka.is/djupivogur' },
 
-  { id: 'c_seydis', day: 'Dia 6 · 01/10', name: 'Camping Seyðisfjörður', cost: 'ref. R$ 290/noite',
-    desc: 'No centro da vila colorida. Sem reserva online — pague na chegada / Parka. Confirme abertura (borda de temporada).',
-    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_seydis', day: 'Dia 6 · 01/10', name: 'Seyðisfjörður ⚠️ LIGAR PARA CONFIRMAR', cost: 'ref. R$ 290/noite',
+    desc: '⚠️ <strong>O único incerto do roteiro.</strong> O site do operador diz "1 abr–31 out", mas essa é a janela do contrato de arrendamento; os diretórios oficiais dizem "1 mai–30 set". Há 6 relatos de gente que dormiu e pagou em outubro/2024, mas há obra no local em 2026. <strong>Ligue +354 792 0070</strong> até 20/09 e de novo entre 28–30/09. Plano B: Camp Egilsstaðir (27 km, ano todo, serviços 24/7).',
+    pills: ['email','season'], url: 'https://seydisfjordurcampsite.com/', op: '📞 +354 792 0070' },
 
-  { id: 'c_myvatn', day: 'Dias 7 e 8 · 02–03/10', name: 'Camping Mývatn (Bjarg)', cost: 'ref. R$ 320/noite × 2',
-    desc: 'Na beira do lago, vista incrível. O próprio camping avisa: "não precisa reservar, sempre há espaço". Pague na chegada / Parka. Duas noites.',
-    pills: ['arrival','parka'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_myvatn', day: 'Dias 7 e 8 · 02–03/10', name: '🔄 Vogar · Mývatn (Bjarg está FECHADO)', cost: 'ref. R$ 320/noite × 2',
+    desc: '🔄 <strong>TROCA OBRIGATÓRIA — 2 noites.</strong> O Bjarg fecha em 01/09. O <strong>Vogar Travel Service</strong> é aberto o ano todo, com cozinha e refeitório internos aquecidos, chuveiro incluso, eletricidade, despejo e <strong>auto check-in 24h</strong>. Sem pré-reserva: chegue com luz, porque as tomadas acabam antes das vagas.',
+    pills: ['arrival'], url: 'https://www.vogartravelservice.com/camping', op: 'Vogar Travel Service' },
 
-  { id: 'c_husavik', day: 'Dia 9 · 04/10', name: 'Camping Húsavík', cost: 'ref. R$ 290/noite',
-    desc: 'Pequeno e central, perto do porto das baleias. Pague na chegada / Parka. Confirme abertura em outubro.',
-    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_husavik', day: 'Dia 9 · 04/10', name: '🔄 Mánárbakki 66.12°N (Húsavík FECHADO)', cost: 'ref. R$ 290/noite',
+    desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> Húsavík fecha 30/09. O <strong>Mánárbakki</strong> (Tjörnes) abre de 1/mar a 31/out, fica a 24 km (~22 min) e tem despejo, eletricidade e cozinha/refeitório aquecidos. É fazenda familiar, sem recepção 24h e fora do Parka — <strong>mande e-mail alguns dias antes</strong>.',
+    pills: ['email','lead'], url: 'https://tjalda.is/en/campsite/manarbakki', op: '📧 manarbakki@gmail.com · +354 898-0424' },
 
-  { id: 'c_hofsos', day: 'Dia 10 · 05/10', name: 'Camping Hofsós', cost: 'ref. R$ 290/noite',
-    desc: 'Simples, ao lado da famosa piscina de borda infinita. Pague na chegada / Parka. Confirme abertura (fim de temporada).',
-    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_hofsos', day: 'Dia 10 · 05/10', name: '🔄 Blönduós (Hofsós FECHADO)', cost: 'ref. R$ 290/noite',
+    desc: '🔄 <strong>TROCA OBRIGATÓRIA.</strong> Hofsós fecha 01/10 no melhor caso (a piscina continua no roteiro, só não dá pra dormir). <strong>Blönduós</strong> é aberto o ano todo, fica na Rota 1, tem despejo/eletricidade/chuveiro e ainda adianta ~120 km. <strong>Ligue +354 837-1300</strong> (reserva online não ativada). Alternativa: Siglufjörður (até 15/10). ❌ Não use Varmahlíð.',
+    pills: ['email','lead'], url: 'https://parka.is/blonduos/', op: '📞 +354 837-1300' },
 
-  { id: 'c_grundar', day: 'Dia 12 · 07/10', name: 'Camping Grundarfjörður', cost: 'ref. R$ 290/noite',
-    desc: 'Municipal, na base do Kirkjufell. <strong>Fecha no início de outubro</strong> — confirme com atenção; tenha um plano B na Snæfellsnes.',
-    pills: ['arrival','parka','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_borgarnes', day: 'Dia 11 · 06/10', name: '🔄 Fossatún (Borgarnes FECHADO)', cost: 'ref. R$ 290/noite',
+    desc: '🔄 <strong>TROCA OBRIGATÓRIA</strong> (esta noite nem estava na lista antes). Borgarnes fecha em meados de setembro. O <strong>Fossatún</strong> fica a 18 km, fecha só em dez–jan e tem tarifa de inverno declarada. ⚠️ Check-in do camping encerra às 20h — <strong>reserve e pague online</strong> e peça por e-mail o nº da vaga + instruções de self check-in.',
+    pills: ['online','lead'], url: 'https://fossatun.is/campsite/', op: 'fossatun.is' },
 
-  { id: 'c_hellnar', day: 'Dia 13 · 08/10', name: 'Camping Hellnar (Hellnar Country Hotel)', cost: 'ref. R$ 290/noite',
-    desc: 'Vila com 9 casas, ligado ao Hellnar Country Hotel. <strong>Fecha por volta de meados de outubro</strong> — vale ligar/e-mail pra confirmar abertura e vaga.',
-    pills: ['email','season'], url: 'https://www.park4night.com', op: 'Verificar no Park4Night' },
+  { id: 'c_grundar', day: 'Dias 12 e 13 · 07–08/10', name: 'Grundarfjörður ✅ ano todo (2 noites)', cost: 'ref. R$ 290/noite × 2',
+    desc: '✅ <strong>Aberto o ano todo</strong> (site do município, tarifas 2026) — eu tinha marcado errado antes. Agora são <strong>2 noites</strong>, porque o "camping de Hellnar" não existe e Arnarstapi/Ólafsvík/Hellissandur fecham em 30/09. A partir de 26/09 entra em modo inverno: só banheiro + eletricidade, sem pré-reserva pelo Parka, chuveiro na piscina municipal.',
+    pills: ['arrival'], url: 'https://www.grundarfjordur.is/is/eng/tourism/grundarfjordur-camp-site', op: 'camping@grundarfjordur.is' },
+
+  { id: 'c_thingvellir', day: 'Dia 14 · 09/10', name: '⭐ Þingvellir · Nyrðri-Leirar (noite de Lua Nova)', cost: 'ref. R$ 350/noite',
+    desc: '⭐ <strong>Recomendado para a última noite de motorhome.</strong> É o único dos quatro campings de Þingvellir aberto o ano todo (temporada de inverno 16/set–31/mai), com <strong>eletricidade</strong>. A Lua Nova é 10/10 — esta é a noite mais escura da viagem, e vocês esperam a aurora dentro do motorhome, já no ponto da foto. Sem check-in formal: paga no site ou no centro de serviços.',
+    pills: ['arrival'], url: 'https://www.thingvellir.is/en/service/camping/', op: 'thingvellir.is' },
 ];
 
 function statusPill(type) {
